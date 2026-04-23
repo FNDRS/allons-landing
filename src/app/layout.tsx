@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   title: "ALLONS · Crea, vende y llena tus eventos.",
   description:
     "ALLONS conecta lo que organizas con quienes buscan experiencias en su ciudad. Publica un evento en minutos, cobra sin fricción y convierte asistentes en fans recurrentes.",
-  icons: { icon: "/isotipo.png" },
+  icons: { icon: "/favicon.png" },
 };
 
 export default function RootLayout({
