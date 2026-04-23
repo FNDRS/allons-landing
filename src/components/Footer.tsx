@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export function Footer() {
   return (
     <footer
@@ -20,35 +22,8 @@ export function Footer() {
         >
           {/* About */}
           <div>
-            <a href="#" style={{ display: "flex", alignItems: "center", gap: 10 }}>
-              <div
-                style={{
-                  width: 32,
-                  height: 32,
-                  borderRadius: 9,
-                  background: "#131516",
-                  color: "#F67010",
-                  display: "grid",
-                  placeItems: "center",
-                  fontFamily: "var(--font-urbanist)",
-                  fontWeight: 800,
-                  fontSize: 17,
-                  letterSpacing: "-0.04em",
-                }}
-              >
-                A
-              </div>
-              <div
-                style={{
-                  fontFamily: "var(--font-urbanist)",
-                  fontWeight: 800,
-                  fontSize: 18,
-                  letterSpacing: "-0.03em",
-                  color: "#131516",
-                }}
-              >
-                ALLONS<span style={{ color: "#F67010" }}>.</span>
-              </div>
+            <a href="#">
+              <Image src="/logo.png" alt="Allons" width={110} height={34} style={{ height: 30, width: "auto" }} />
             </a>
             <p style={{ fontSize: 14, color: "#494848", maxWidth: 320, margin: "14px 0 0" }}>
               Conectamos a quienes crean eventos con quienes buscan experiencias en su ciudad.

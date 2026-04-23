@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import Link from "next/link";
 
 export function Navbar() {
@@ -37,35 +38,8 @@ export function Navbar() {
         }}
       >
         {/* Brand */}
-        <Link href="/" style={{ display: "flex", alignItems: "center", gap: 10 }}>
-          <div
-            style={{
-              width: 32,
-              height: 32,
-              borderRadius: 9,
-              background: "#131516",
-              color: "#F67010",
-              display: "grid",
-              placeItems: "center",
-              fontFamily: "var(--font-urbanist)",
-              fontWeight: 800,
-              fontSize: 17,
-              letterSpacing: "-0.04em",
-            }}
-          >
-            A
-          </div>
-          <div
-            style={{
-              fontFamily: "var(--font-urbanist)",
-              fontWeight: 800,
-              fontSize: 18,
-              letterSpacing: "-0.03em",
-              color: "#131516",
-            }}
-          >
-            ALLONS<span style={{ color: "#F67010" }}>.</span>
-          </div>
+        <Link href="/">
+          <Image src="/logo.png" alt="Allons" width={120} height={36} style={{ height: 32, width: "auto" }} priority />
         </Link>
 
         {/* Nav links — desktop */}
