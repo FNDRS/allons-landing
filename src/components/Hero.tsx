@@ -174,101 +174,143 @@ export function Hero() {
           </div>
         </div>
 
-        {/* Right — dark art card */}
+        {/* Right — dark art card
+             Outer: position relative, no overflow (so floating cards show)
+             Inner: overflow hidden to clip gradient + hatching + poster
+        */}
         <div
           style={{
             position: "relative",
             aspectRatio: "1",
-            background: "radial-gradient(ellipse at top right, rgba(246,112,16,0.14), transparent 60%), linear-gradient(135deg, #131516 0%, #2B2A2F 100%)",
-            borderRadius: 28,
-            overflow: "hidden",
-            padding: 28,
-            color: "#fff",
-            boxShadow: "0 40px 80px -20px rgba(19,21,22,0.4)",
+            /* extra padding so cards that poke out don't get clipped by the grid */
+            margin: "0 24px",
           }}
           aria-hidden
         >
-          {/* Hatching */}
+          {/* Inner clipping layer */}
           <div
             style={{
               position: "absolute",
               inset: 0,
-              background: "repeating-linear-gradient(45deg, rgba(255,255,255,0.02) 0 8px, transparent 8px 16px)",
-              pointerEvents: "none",
-            }}
-          />
-
-          <div
-            style={{
-              fontFamily: "var(--font-jetbrains)",
-              fontSize: 10.5,
-              letterSpacing: "0.1em",
-              opacity: 0.55,
-              textTransform: "uppercase",
-              position: "relative",
-            }}
-          >
-            Tu próximo evento
-          </div>
-          <div
-            style={{
-              marginTop: 10,
-              fontFamily: "var(--font-urbanist)",
-              fontWeight: 700,
-              fontSize: 28,
-              letterSpacing: "-0.025em",
-              lineHeight: 1.05,
-              position: "relative",
-            }}
-          >
-            Allons Rave<br />Summer Edition.
-          </div>
-
-          {/* Event poster */}
-          <div
-            style={{
-              position: "absolute",
-              bottom: 28,
-              left: 28,
-              right: 28,
-              height: "52%",
-              borderRadius: 18,
-              background: "linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(0,0,0,0.7) 100%), repeating-linear-gradient(45deg, rgba(255,255,255,0.05) 0 6px, rgba(255,255,255,0) 6px 12px), linear-gradient(135deg, #A81F0C 0%, #2B2A2F 100%)",
-              padding: 20,
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "space-between",
+              background: "radial-gradient(ellipse at top right, rgba(246,112,16,0.14), transparent 60%), linear-gradient(135deg, #131516 0%, #2B2A2F 100%)",
+              borderRadius: 28,
               overflow: "hidden",
+              boxShadow: "0 40px 80px -20px rgba(19,21,22,0.4)",
             }}
           >
-            <div>
-              <div style={{ fontFamily: "var(--font-jetbrains)", fontSize: 10.5, letterSpacing: "0.1em", textTransform: "uppercase", color: "#F67010" }}>
-                Vie · 11 Jul · 22:00
+            {/* Hatching */}
+            <div
+              style={{
+                position: "absolute",
+                inset: 0,
+                background: "repeating-linear-gradient(45deg, rgba(255,255,255,0.02) 0 8px, transparent 8px 16px)",
+                pointerEvents: "none",
+              }}
+            />
+            {/* Event poster */}
+            <div
+              style={{
+                position: "absolute",
+                bottom: 28,
+                left: 28,
+                right: 28,
+                height: "52%",
+                borderRadius: 18,
+                background: "linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(0,0,0,0.7) 100%), repeating-linear-gradient(45deg, rgba(255,255,255,0.05) 0 6px, rgba(255,255,255,0) 6px 12px), linear-gradient(135deg, #A81F0C 0%, #2B2A2F 100%)",
+                padding: 20,
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-between",
+                overflow: "hidden",
+              }}
+            >
+              <div>
+                <div style={{ fontFamily: "var(--font-jetbrains)", fontSize: 10.5, letterSpacing: "0.1em", textTransform: "uppercase", color: "#F67010" }}>
+                  Vie · 11 Jul · 22:00
+                </div>
+                <div style={{ fontFamily: "var(--font-urbanist)", fontWeight: 800, fontSize: 26, letterSpacing: "-0.025em", lineHeight: 1.02, marginTop: 8, color: "#fff" }}>
+                  Jungla<br />en vivo.
+                </div>
               </div>
-              <div style={{ fontFamily: "var(--font-urbanist)", fontWeight: 800, fontSize: 26, letterSpacing: "-0.025em", lineHeight: 1.02, marginTop: 8 }}>
-                Jungla<br />en vivo.
+              <div style={{ display: "flex", alignItems: "center", gap: 14, fontFamily: "var(--font-jetbrains)", fontSize: 11, opacity: 0.85, color: "#fff" }}>
+                <span>SPS · Angeli Gardens</span>
+                <span style={{ marginLeft: "auto" }}>L. 300</span>
               </div>
             </div>
-            <div style={{ display: "flex", alignItems: "center", gap: 14, fontFamily: "var(--font-jetbrains)", fontSize: 11, opacity: 0.85 }}>
-              <span>SPS · Angeli Gardens</span>
-              <span style={{ marginLeft: "auto" }}>L. 300</span>
+
+            {/* Floating card 3 — live (stays inside) */}
+            <div
+              className="float-3"
+              style={{
+                position: "absolute",
+                bottom: "48%",
+                left: "50%",
+                transform: "translateX(-50%)",
+                padding: "10px 14px",
+                display: "flex",
+                alignItems: "center",
+                gap: 10,
+                background: "#131516",
+                color: "#fff",
+                borderRadius: 14,
+                boxShadow: "0 10px 28px rgba(19,21,22,0.3)",
+                whiteSpace: "nowrap",
+              }}
+            >
+              <span
+                className="pulse-dot"
+                style={{ width: 8, height: 8, borderRadius: "50%", background: "#F67010", flexShrink: 0 }}
+              />
+              <span style={{ fontFamily: "var(--font-jetbrains)", fontSize: 11.5, color: "rgba(255,255,255,0.75)" }}>
+                2 NUEVAS RESERVAS
+              </span>
             </div>
           </div>
 
-          {/* Floating card 1 — revenue */}
+          {/* Label + title sit on top of inner layer */}
+          <div style={{ position: "relative", padding: 28, pointerEvents: "none" }}>
+            <div
+              style={{
+                fontFamily: "var(--font-jetbrains)",
+                fontSize: 10.5,
+                letterSpacing: "0.1em",
+                opacity: 0.55,
+                textTransform: "uppercase",
+                color: "#fff",
+              }}
+            >
+              Tu próximo evento
+            </div>
+            <div
+              style={{
+                marginTop: 10,
+                fontFamily: "var(--font-urbanist)",
+                fontWeight: 700,
+                fontSize: 28,
+                letterSpacing: "-0.025em",
+                lineHeight: 1.05,
+                color: "#fff",
+              }}
+            >
+              Allons Rave<br />Summer Edition.
+            </div>
+          </div>
+
+          {/* Floating card 1 — revenue (top right, centered on edge) */}
           <div
             className="float-1"
             style={{
               position: "absolute",
-              top: 42,
-              right: -28,
-              width: 200,
+              top: 32,
+              right: -24,
+              width: 190,
               background: "#fff",
               color: "#131516",
               borderRadius: 14,
               padding: "14px 16px",
               boxShadow: "0 20px 40px rgba(0,0,0,0.18), 0 0 0 1px rgba(19,21,22,0.04)",
               fontSize: 13,
+              zIndex: 10,
             }}
           >
             <div style={{ fontFamily: "var(--font-jetbrains)", fontSize: 10.5, color: "#6B6A70", letterSpacing: "0.06em", textTransform: "uppercase" }}>Ingreso hoy</div>
@@ -276,59 +318,28 @@ export function Hero() {
             <div style={{ color: "#1E8755", fontFamily: "var(--font-jetbrains)", fontSize: 11.5, marginTop: 3 }}>▲ +12.4% vs ayer</div>
           </div>
 
-          {/* Floating card 2 — tickets */}
+          {/* Floating card 2 — tickets (bottom left, centered on edge) */}
           <div
             className="float-2"
             style={{
               position: "absolute",
-              bottom: 36,
-              left: -28,
-              width: 220,
+              bottom: 60,
+              left: -24,
+              width: 200,
               background: "#fff",
               color: "#131516",
               borderRadius: 14,
               padding: "14px 16px",
               boxShadow: "0 20px 40px rgba(0,0,0,0.18), 0 0 0 1px rgba(19,21,22,0.04)",
               fontSize: 13,
+              zIndex: 10,
             }}
           >
             <div style={{ fontFamily: "var(--font-jetbrains)", fontSize: 10.5, color: "#6B6A70", letterSpacing: "0.06em", textTransform: "uppercase" }}>Tickets</div>
             <div style={{ fontFamily: "var(--font-urbanist)", fontWeight: 700, fontSize: 22, letterSpacing: "-0.02em", marginTop: 4, display: "flex", alignItems: "baseline", gap: 4 }}>
-              382<span style={{ fontSize: 12, color: "#6B6A70", fontWeight: 500, fontFamily: "var(--font-dm-sans)" }}>/ 450</span>
+              382<span style={{ fontSize: 12, color: "#6B6A70", fontWeight: 500 }}>/ 450</span>
             </div>
             <div style={{ color: "#1E8755", fontFamily: "var(--font-jetbrains)", fontSize: 11.5, marginTop: 3 }}>85% ocupación</div>
-          </div>
-
-          {/* Floating card 3 — live */}
-          <div
-            className="float-3"
-            style={{
-              position: "absolute",
-              bottom: "48%",
-              right: "18%",
-              padding: "10px 14px",
-              display: "flex",
-              alignItems: "center",
-              gap: 10,
-              background: "#131516",
-              color: "#fff",
-              borderRadius: 14,
-              boxShadow: "0 10px 28px rgba(19,21,22,0.3)",
-            }}
-          >
-            <span
-              className="pulse-dot"
-              style={{
-                width: 8,
-                height: 8,
-                borderRadius: "50%",
-                background: "#F67010",
-                flexShrink: 0,
-              }}
-            />
-            <span style={{ fontFamily: "var(--font-jetbrains)", fontSize: 11.5, color: "rgba(255,255,255,0.75)" }}>
-              2 NUEVAS RESERVAS
-            </span>
           </div>
         </div>
       </div>
