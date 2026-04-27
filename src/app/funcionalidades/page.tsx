@@ -74,7 +74,6 @@ const FEATURES = [
       },
     ],
   },
- 
 ];
 
 export default function FuncionalidadesPage() {
@@ -84,7 +83,7 @@ export default function FuncionalidadesPage() {
       title={
         <>
           Todo lo que necesitas{" "}
-          <span style={{ color: "#F67010" }}>en un solo lugar.</span>
+          <span style={{ color: "var(--color-liquid-lava)" }}>en un solo lugar.</span>
         </>
       }
       subtitle="Desde la primera publicación hasta el cierre de caja, ALLONS te da las herramientas para que tu evento se vea profesional y se llene rápido."
@@ -93,13 +92,10 @@ export default function FuncionalidadesPage() {
         {FEATURES.map((section) => (
           <div key={section.group} style={{ marginTop: 60 }}>
             <h2
+              className="ds-display-md"
               style={{
-                fontFamily: "var(--font-urbanist)",
-                fontWeight: 700,
-                fontSize: 28,
-                letterSpacing: "-0.02em",
                 margin: "0 0 24px",
-                color: "#131516",
+                color: "var(--color-gluon-grey)",
               }}
             >
               {section.group}
@@ -117,29 +113,27 @@ export default function FuncionalidadesPage() {
                 <div
                   key={item.title}
                   style={{
-                    background: "#fff",
-                    border: "1px solid #EAE8E4",
+                    background: "var(--color-snow)",
+                    border: "1px solid var(--color-line)",
                     borderRadius: 16,
                     padding: 24,
                   }}
                 >
-                  <h3
+                  <h2
+                    className="ds-h2"
                     style={{
-                      fontFamily: "var(--font-urbanist)",
-                      fontWeight: 600,
-                      fontSize: 17,
                       margin: "0 0 8px",
-                      color: "#131516",
+                      color: "var(--color-gluon-grey)",
                     }}
                   >
                     {item.title}
-                  </h3>
+                  </h2>
                   <p
+                    className="ds-body"
                     style={{
-                      fontSize: 14.5,
-                      color: "#494848",
+                      color: "var(--color-dusty-grey)",
                       margin: 0,
-                      lineHeight: 1.55,
+                      lineHeight: 1.6,
                     }}
                   >
                     {item.desc}

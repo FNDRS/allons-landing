@@ -20,7 +20,7 @@ export default function LoginPage() {
       title={
         <>
           El acceso al panel estará{" "}
-          <span style={{ color: "#F67010" }}>disponible pronto.</span>
+          <span style={{ color: "var(--color-liquid-lava)" }}>disponible pronto.</span>
         </>
       }
       subtitle="Estamos preparando el login de organizadores. Por ahora, si querés acceso temprano, escribinos y te agregamos a la lista."
@@ -28,16 +28,15 @@ export default function LoginPage() {
       <div style={{ marginTop: 40, paddingBottom: 80 }}>
         <a
           href="mailto:soporte@allonsapp.com?subject=Quiero acceso temprano a ALLONS"
+          className="ds-btn ds-btn-active"
           style={{
             display: "inline-flex",
             alignItems: "center",
             gap: 8,
-            padding: "14px 22px",
+            padding: "12px 22px",
             borderRadius: 12,
-            fontWeight: 600,
-            fontSize: 15,
-            color: "#fff",
-            background: "#F67010",
+            color: "var(--color-snow)",
+            background: "var(--color-liquid-lava)",
           }}
         >
           Pedir acceso temprano

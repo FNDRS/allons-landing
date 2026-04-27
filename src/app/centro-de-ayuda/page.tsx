@@ -18,7 +18,7 @@ export default function CentroDeAyudaPage() {
       title={
         <>
           ¿Necesitás{" "}
-          <span style={{ color: "#F67010" }}>ayuda?</span>
+          <span style={{ color: "var(--color-liquid-lava)" }}>ayuda?</span>
         </>
       }
       subtitle="Por ahora el canal principal es el correo. Contanos qué necesitás y te respondemos."
@@ -33,23 +33,20 @@ export default function CentroDeAyudaPage() {
       >
         <a
           href={`mailto:${SUPPORT_EMAIL}`}
+          className="ds-h2"
           style={{
             display: "inline-flex",
             alignItems: "center",
             gap: 12,
-            padding: "22px 32px",
+            padding: "20px 28px",
             borderRadius: 16,
-            background: "#fff",
-            border: "1px solid #EAE8E4",
-            fontFamily: "var(--font-urbanist)",
-            fontWeight: 600,
-            fontSize: 22,
-            letterSpacing: "-0.02em",
-            color: "#131516",
+            background: "var(--color-snow)",
+            border: "1px solid var(--color-line)",
+            color: "var(--color-gluon-grey)",
             textDecoration: "none",
           }}
         >
-          <span style={{ color: "#F67010" }}>@</span>
+          <span style={{ color: "var(--color-liquid-lava)" }}>@</span>
           {SUPPORT_EMAIL}
         </a>
       </div>

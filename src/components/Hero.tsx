@@ -19,32 +19,28 @@ export function Hero() {
         }}
         className="hero-grid"
       >
-        {/* Left — copy */}
         <div>
-          {/* Eyebrow */}
           <span
+            className="ds-chip-active"
             style={{
               display: "inline-flex",
               alignItems: "center",
               gap: 8,
               padding: "5px 12px 5px 6px",
-              background: "#fff",
-              border: "1px solid #EAE8E4",
+              background: "var(--color-snow)",
+              border: "1px solid var(--color-line)",
               borderRadius: 999,
-              fontSize: 12.5,
-              fontWeight: 500,
-              color: "#2B2A2F",
+              color: "var(--color-gluon-grey)",
             }}
           >
             <span
+              className="ds-chip-active"
               style={{
-                background: "#131516",
-                color: "#F67010",
-                fontFamily: "var(--font-jetbrains)",
-                fontSize: 10.5,
-                padding: "3px 7px",
+                background: "var(--color-gluon-grey)",
+                color: "var(--color-liquid-lava)",
+                padding: "3px 10px",
                 borderRadius: 999,
-                letterSpacing: "0.06em",
+                letterSpacing: "0.04em",
               }}
             >
               NUEVO
@@ -52,153 +48,92 @@ export function Hero() {
             Panel PRO para organizadores 2026
           </span>
 
-          {/* H1 */}
           <h1
+            className="ds-display-xl"
             style={{
-              fontFamily: "var(--font-urbanist)",
-              fontWeight: 800,
-              fontSize: "clamp(44px, 5.8vw, 78px)",
-              lineHeight: 0.98,
-              letterSpacing: "-0.035em",
               margin: "22px 0 22px",
-              color: "#131516",
+              color: "var(--color-gluon-grey)",
             }}
           >
             Crea, vende y{" "}
-            <span style={{ color: "#F67010", fontStyle: "bold" }}>promociona</span>
+            <span style={{ color: "var(--color-liquid-lava)" }}>promociona</span>
             <br />
             tus eventos en Honduras.
           </h1>
 
           <p
+            className="ds-lead"
             style={{
-              fontSize: 18,
-              color: "#494848",
+              color: "var(--color-dusty-grey)",
               maxWidth: 520,
               margin: "0 0 28px",
-              lineHeight: 1.5,
             }}
           >
             ALLONS conecta lo que organizas con quienes buscan experiencias en su ciudad. Publica un evento en minutos, cobra sin fricción y convierte asistentes en fans recurrentes.
           </p>
 
-          {/* CTAs */}
           <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
             <a
               href="/registro"
+              className="ds-btn ds-btn-active"
               style={{
                 display: "inline-flex",
                 alignItems: "center",
                 gap: 8,
-                padding: "14px 22px",
+                padding: "12px 22px",
                 borderRadius: 12,
-                fontWeight: 600,
-                fontSize: 15,
-                color: "#fff",
-                background: "#F67010",
+                color: "var(--color-snow)",
+                background: "var(--color-liquid-lava)",
                 border: "1px solid transparent",
                 cursor: "pointer",
               }}
             >
               Abrir mi cuenta gratis
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M5 12h14M13 5l7 7-7 7" />
               </svg>
             </a>
             <a
               href="/demo"
+              className="ds-btn ds-btn-active"
               style={{
                 display: "inline-flex",
                 alignItems: "center",
                 gap: 8,
-                padding: "14px 22px",
+                padding: "12px 22px",
                 borderRadius: 12,
-                fontWeight: 600,
-                fontSize: 15,
-                color: "#131516",
-                background: "#fff",
-                border: "1px solid #E7E7E7",
+                color: "var(--color-gluon-grey)",
+                background: "var(--color-snow)",
+                border: "1px solid var(--color-line)",
                 cursor: "pointer",
               }}
             >
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M8 5v14l12-7z" />
               </svg>
               Ver demo · 2 min
             </a>
           </div>
-
-          {/* Meta stats */}
-       {/*    <div
-            style={{
-              marginTop: 32,
-              display: "flex",
-              gap: 32,
-              flexWrap: "wrap",
-              paddingTop: 24,
-              borderTop: "1px solid #EAE8E4",
-            }}
-          >
-            {[
-              { k: "ORGANIZADORES", v: "1,240+" },
-              { k: "TICKETS VENDIDOS", v: "842K" },
-              { k: "CIUDADES", v: "14" },
-              { k: "COMISIÓN DESDE", v: "5%" },
-            ].map((stat) => (
-              <div key={stat.k}>
-                <div
-                  style={{
-                    fontFamily: "var(--font-jetbrains)",
-                    fontSize: 10.5,
-                    letterSpacing: "0.08em",
-                    textTransform: "uppercase",
-                    color: "#6B6A70",
-                    marginBottom: 4,
-                  }}
-                >
-                  {stat.k}
-                </div>
-                <div
-                  style={{
-                    fontFamily: "var(--font-urbanist)",
-                    fontWeight: 700,
-                    fontSize: 22,
-                    letterSpacing: "-0.02em",
-                    color: "#131516",
-                  }}
-                >
-                  {stat.v}
-                </div>
-              </div>
-            ))}
-          </div> */}
         </div>
 
-        {/* Right — dark art card
-             Outer: position relative, no overflow (so floating cards show)
-             Inner: overflow hidden to clip gradient + hatching + poster
-        */}
         <div
           style={{
             position: "relative",
             aspectRatio: "1",
-            /* extra padding so cards that poke out don't get clipped by the grid */
             margin: "0 24px",
           }}
           aria-hidden
         >
-          {/* Inner clipping layer */}
           <div
             style={{
               position: "absolute",
               inset: 0,
-              background: "radial-gradient(ellipse at top right, rgba(246,112,16,0.14), transparent 60%), linear-gradient(135deg, #131516 0%, #2B2A2F 100%)",
+              background: "radial-gradient(ellipse at top right, rgba(246,112,16,0.14), transparent 60%), linear-gradient(135deg, var(--color-gluon-grey) 0%, #2B2A2F 100%)",
               borderRadius: 28,
               overflow: "hidden",
-              boxShadow: "0 40px 80px -20px rgba(19,21,22,0.4)",
+              boxShadow: "0 40px 80px -20px rgba(28,27,32,0.4)",
             }}
           >
-            {/* Hatching */}
             <div
               style={{
                 position: "absolute",
@@ -207,7 +142,6 @@ export function Hero() {
                 pointerEvents: "none",
               }}
             />
-            {/* Event poster */}
             <div
               style={{
                 position: "absolute",
@@ -225,20 +159,41 @@ export function Hero() {
               }}
             >
               <div>
-                <div style={{ fontFamily: "var(--font-jetbrains)", fontSize: 10.5, letterSpacing: "0.1em", textTransform: "uppercase", color: "#F67010" }}>
+                <div
+                  className="ds-chip"
+                  style={{
+                    letterSpacing: "0.04em",
+                    textTransform: "uppercase",
+                    color: "var(--color-liquid-lava)",
+                  }}
+                >
                   Vie · 11 Jul · 22:00
                 </div>
-                <div style={{ fontFamily: "var(--font-urbanist)", fontWeight: 800, fontSize: 26, letterSpacing: "-0.025em", lineHeight: 1.02, marginTop: 8, color: "#fff" }}>
+                <div
+                  className="ds-display-sm"
+                  style={{
+                    marginTop: 8,
+                    color: "var(--color-snow)",
+                  }}
+                >
                   Jungla<br />en vivo.
                 </div>
               </div>
-              <div style={{ display: "flex", alignItems: "center", gap: 14, fontFamily: "var(--font-jetbrains)", fontSize: 11, opacity: 0.85, color: "#fff" }}>
+              <div
+                className="ds-chip"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 14,
+                  opacity: 0.85,
+                  color: "var(--color-snow)",
+                }}
+              >
                 <span>SPS · Angeli Gardens</span>
                 <span style={{ marginLeft: "auto" }}>L. 300</span>
               </div>
             </div>
 
-            {/* Floating card 3 — live (stays inside) */}
             <div
               className="float-3"
               style={{
@@ -250,75 +205,76 @@ export function Hero() {
                 display: "flex",
                 alignItems: "center",
                 gap: 10,
-                background: "#131516",
-                color: "#fff",
+                background: "var(--color-gluon-grey)",
+                color: "var(--color-snow)",
                 borderRadius: 14,
-                boxShadow: "0 10px 28px rgba(19,21,22,0.3)",
+                boxShadow: "0 10px 28px rgba(28,27,32,0.3)",
                 whiteSpace: "nowrap",
               }}
             >
               <span
                 className="pulse-dot"
-                style={{ width: 8, height: 8, borderRadius: "50%", background: "#F67010", flexShrink: 0 }}
+                style={{ width: 8, height: 8, borderRadius: "50%", background: "var(--color-liquid-lava)", flexShrink: 0 }}
               />
-              <span style={{ fontFamily: "var(--font-jetbrains)", fontSize: 11.5, color: "rgba(255,255,255,0.75)" }}>
+              <span
+                className="ds-chip"
+                style={{ color: "rgba(255,255,255,0.75)" }}
+              >
                 2 NUEVAS RESERVAS
               </span>
             </div>
           </div>
 
-          {/* Label + title sit on top of inner layer */}
           <div style={{ position: "relative", padding: 28, pointerEvents: "none" }}>
             <div
+              className="ds-chip"
               style={{
-                fontFamily: "var(--font-jetbrains)",
-                fontSize: 10.5,
-                letterSpacing: "0.1em",
+                letterSpacing: "0.04em",
                 opacity: 0.55,
                 textTransform: "uppercase",
-                color: "#fff",
+                color: "var(--color-snow)",
               }}
             >
               Tu próximo evento
             </div>
             <div
+              className="ds-display-sm"
               style={{
-                marginTop: 10,
-                fontFamily: "var(--font-urbanist)",
-                fontWeight: 700,
-                fontSize: 28,
-                letterSpacing: "-0.025em",
-                lineHeight: 1.05,
-                color: "#fff",
+                marginTop: 8,
+                color: "var(--color-snow)",
               }}
             >
               Allons Rave<br />Summer Edition.
             </div>
           </div>
 
-          {/* Floating card 1 — revenue (top right, centered on edge) */}
           <div
             className="float-1"
             style={{
               position: "absolute",
               top: 32,
               right: -24,
-              width: 190,
-              background: "#fff",
-              color: "#131516",
+              width: 200,
+              background: "var(--color-snow)",
+              color: "var(--color-gluon-grey)",
               borderRadius: 14,
               padding: "14px 16px",
-              boxShadow: "0 20px 40px rgba(0,0,0,0.18), 0 0 0 1px rgba(19,21,22,0.04)",
-              fontSize: 13,
+              boxShadow: "0 20px 40px rgba(0,0,0,0.18), 0 0 0 1px rgba(28,27,32,0.04)",
               zIndex: 10,
             }}
           >
-            <div style={{ fontFamily: "var(--font-jetbrains)", fontSize: 10.5, color: "#6B6A70", letterSpacing: "0.06em", textTransform: "uppercase" }}>Ingreso hoy</div>
-            <div style={{ fontFamily: "var(--font-urbanist)", fontWeight: 700, fontSize: 22, letterSpacing: "-0.02em", marginTop: 4 }}>L. 128.4k</div>
-            <div style={{ color: "#1E8755", fontFamily: "var(--font-jetbrains)", fontSize: 11.5, marginTop: 3 }}>▲ +12.4% vs ayer</div>
+            <div
+              className="ds-chip"
+              style={{ color: "var(--color-dusty-grey)", letterSpacing: "0.04em", textTransform: "uppercase" }}
+            >
+              Ingreso hoy
+            </div>
+            <div className="ds-display-sm" style={{ marginTop: 4 }}>L. 128.4k</div>
+            <div className="ds-chip" style={{ color: "var(--color-emerald-green)", marginTop: 3 }}>
+              ▲ +12.4% vs ayer
+            </div>
           </div>
 
-          {/* Floating card 2 — tickets (bottom left, centered on edge) */}
           <div
             className="float-2"
             style={{
@@ -326,20 +282,29 @@ export function Hero() {
               bottom: 60,
               left: -24,
               width: 200,
-              background: "#fff",
-              color: "#131516",
+              background: "var(--color-snow)",
+              color: "var(--color-gluon-grey)",
               borderRadius: 14,
               padding: "14px 16px",
-              boxShadow: "0 20px 40px rgba(0,0,0,0.18), 0 0 0 1px rgba(19,21,22,0.04)",
-              fontSize: 13,
+              boxShadow: "0 20px 40px rgba(0,0,0,0.18), 0 0 0 1px rgba(28,27,32,0.04)",
               zIndex: 10,
             }}
           >
-            <div style={{ fontFamily: "var(--font-jetbrains)", fontSize: 10.5, color: "#6B6A70", letterSpacing: "0.06em", textTransform: "uppercase" }}>Tickets</div>
-            <div style={{ fontFamily: "var(--font-urbanist)", fontWeight: 700, fontSize: 22, letterSpacing: "-0.02em", marginTop: 4, display: "flex", alignItems: "baseline", gap: 4 }}>
-              382<span style={{ fontSize: 12, color: "#6B6A70", fontWeight: 500 }}>/ 450</span>
+            <div
+              className="ds-chip"
+              style={{ color: "var(--color-dusty-grey)", letterSpacing: "0.04em", textTransform: "uppercase" }}
+            >
+              Tickets
             </div>
-            <div style={{ color: "#1E8755", fontFamily: "var(--font-jetbrains)", fontSize: 11.5, marginTop: 3 }}>85% ocupación</div>
+            <div className="ds-display-sm" style={{ marginTop: 4, display: "flex", alignItems: "baseline", gap: 4 }}>
+              382
+              <span className="ds-body" style={{ color: "var(--color-dusty-grey)" }}>
+                / 450
+              </span>
+            </div>
+            <div className="ds-chip" style={{ color: "var(--color-emerald-green)", marginTop: 3 }}>
+              85% ocupación
+            </div>
           </div>
         </div>
       </div>

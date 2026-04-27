@@ -6,7 +6,7 @@ Landing page para organizadores de eventos de **ALLONS**, la plataforma de ticke
 
 - **Next.js 16** (App Router, static export)
 - **Tailwind CSS v4**
-- **Tipografías:** Urbanist · DM Sans · JetBrains Mono (via `next/font/google`)
+- **Tipografías:** Urbanist · JetBrains Mono (via `next/font/google`)
 
 ## Estructura
 

@@ -5,8 +5,8 @@ function Ic({ children }: { children: React.ReactNode }) {
         width: 36,
         height: 36,
         borderRadius: 10,
-        background: "#FFF1E6",
-        color: "#F67010",
+        background: "color-mix(in srgb, var(--color-liquid-lava) 12%, transparent)",
+        color: "var(--color-liquid-lava)",
         display: "grid",
         placeItems: "center",
         marginBottom: 16,
@@ -26,7 +26,7 @@ function IcDark({ children }: { children: React.ReactNode }) {
         height: 36,
         borderRadius: 10,
         background: "rgba(246,112,16,0.15)",
-        color: "#F67010",
+        color: "var(--color-liquid-lava)",
         display: "grid",
         placeItems: "center",
         marginBottom: 16,
@@ -44,45 +44,38 @@ export function Features() {
   return (
     <section id="features" style={{ padding: "100px 0" }}>
       <div style={{ maxWidth: 1240, margin: "0 auto", padding: "0 32px" }}>
-        {/* Kicker */}
         <div
+          className="ds-chip-active"
           style={{
             display: "inline-flex",
             alignItems: "center",
             gap: 8,
-            fontFamily: "var(--font-jetbrains)",
-            fontSize: 11,
-            color: "#F67010",
-            letterSpacing: "0.12em",
+            color: "var(--color-liquid-lava)",
+            letterSpacing: "0.04em",
             textTransform: "uppercase",
-            fontWeight: 500,
             marginBottom: 14,
           }}
         >
-          <span style={{ display: "inline-block", width: 20, height: 1, background: "#F67010" }} />
+          <span style={{ display: "inline-block", width: 20, height: 1, background: "var(--color-liquid-lava)" }} />
           Producto
         </div>
 
-        <h2
+        <h1
+          className="ds-display-lg"
           style={{
-            fontFamily: "var(--font-urbanist)",
-            fontWeight: 700,
-            fontSize: "clamp(32px, 3.6vw, 48px)",
-            letterSpacing: "-0.028em",
-            lineHeight: 1.05,
             margin: "0 0 18px",
-            color: "#131516",
+            color: "var(--color-gluon-grey)",
             maxWidth: 780,
           }}
         >
           Todo lo que necesitas para{" "}
-          <span style={{ color: "#F67010", fontStyle: "bold" }}>llenar la sala.</span>
-        </h2>
+          <span style={{ color: "var(--color-liquid-lava)" }}>llenar la sala.</span>
+        </h1>
 
-        <p style={{ fontSize: 17, color: "#494848", maxWidth: 620, margin: "0 0 40px" }}>
-        Publicas tu evento, vendes entradas y revisas cómo va todo desde un mismo lugar. Sin saltar entre apps ni armar reportes a mano en excel.        </p>
+        <p className="ds-lead" style={{ color: "var(--color-dusty-grey)", maxWidth: 620, margin: "0 0 40px" }}>
+          Publicas tu evento, vendes entradas y revisas cómo va todo desde un mismo lugar. Sin saltar entre apps ni armar reportes a mano en excel.
+        </p>
 
-        {/* Bento grid */}
         <div
           style={{
             display: "grid",
@@ -92,19 +85,18 @@ export function Features() {
           }}
           className="bento-grid"
         >
-          {/* T1 — featured dashboard tile */}
           <div
             className="bento-t1"
             style={{
-              background: "#131516",
-              border: "1px solid #131516",
+              background: "var(--color-gluon-grey)",
+              border: "1px solid var(--color-gluon-grey)",
               borderRadius: 20,
               padding: 26,
               position: "relative",
               overflow: "hidden",
               display: "flex",
               flexDirection: "column",
-              color: "#fff",
+              color: "var(--color-snow)",
             }}
           >
             <IcDark>
@@ -112,14 +104,19 @@ export function Features() {
                 <path d="M4 20V10M10 20V4M16 20v-8M22 20H2" />
               </svg>
             </IcDark>
-            <h3 style={{ fontFamily: "var(--font-urbanist)", fontWeight: 700, fontSize: 28, letterSpacing: "-0.015em", margin: "0 0 8px", color: "#fff" }}>
+            <h2
+              className="ds-display-sm"
+              style={{
+                margin: "0 0 10px",
+                color: "var(--color-snow)",
+              }}
+            >
               Un panel que ya se siente como tu oficina.
-            </h3>
-            <p style={{ fontSize: 15, color: "rgba(255,255,255,0.7)", margin: 0, maxWidth: 420 }}>
+            </h2>
+            <p className="ds-lead" style={{ color: "rgba(255,255,255,0.7)", margin: 0, maxWidth: 420 }}>
               Ingresos, reservas y reseñas actualizándose en tiempo real. Con gráficos claros y acciones rápidas cuando algo necesita tu atención.
             </p>
 
-            {/* Dashboard mini-preview */}
             <div
               style={{
                 marginTop: 22,
@@ -138,6 +135,7 @@ export function Features() {
               ].map((row) => (
                 <div
                   key={row.label}
+                  className="ds-body"
                   style={{
                     display: "flex",
                     alignItems: "baseline",
@@ -145,16 +143,14 @@ export function Features() {
                     padding: "10px 12px",
                     background: "rgba(255,255,255,0.03)",
                     borderRadius: 10,
-                    fontFamily: "var(--font-jetbrains)",
-                    fontSize: 12,
                     color: "rgba(255,255,255,0.65)",
                   }}
                 >
                   <span>{row.label}</span>
-                  <b style={{ color: "#fff", fontFamily: "var(--font-urbanist)", fontSize: 15, letterSpacing: "-0.01em" }}>
+                  <b className="ds-h2" style={{ color: "var(--color-snow)" }}>
                     {row.value}{" "}
                     {row.delta && (
-                      <span style={{ color: "#7EE8A7" }}>{row.delta}</span>
+                      <span style={{ color: "var(--color-emerald-green)" }}>{row.delta}</span>
                     )}
                   </b>
                 </div>
@@ -162,50 +158,46 @@ export function Features() {
             </div>
           </div>
 
-          {/* T2 — Ticketing */}
-          <div className="bento-t2" style={{ background: "#fff", border: "1px solid #EAE8E4", borderRadius: 20, padding: 26, display: "flex", flexDirection: "column" }}>
+          <div className="bento-t2" style={{ background: "var(--color-snow)", border: "1px solid var(--color-line)", borderRadius: 20, padding: 26, display: "flex", flexDirection: "column" }}>
             <Ic>
               <svg viewBox="0 0 24 24" width="18" height="18" {...STROKE}>
                 <path d="M4 8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v2a2 2 0 0 0 0 4v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2a2 2 0 0 0 0-4Z" />
                 <path d="M14 6v12" strokeDasharray="1.5 2.5" />
               </svg>
             </Ic>
-            <h3 style={{ fontFamily: "var(--font-urbanist)", fontWeight: 700, fontSize: 19, letterSpacing: "-0.015em", margin: "0 0 8px" }}>Ticketing flexible</h3>
-            <p style={{ fontSize: 14, color: "#494848", margin: 0, maxWidth: 340 }}>
+            <h2 className="ds-h2" style={{ margin: "0 0 8px", color: "var(--color-gluon-grey)" }}>Ticketing flexible</h2>
+            <p className="ds-body" style={{ color: "var(--color-dusty-grey)", margin: 0, maxWidth: 340 }}>
               Crea entradas VIP, general, palco, graderías. Aplica códigos, cupos por persona y reservas con pago en línea o en el local.
             </p>
           </div>
 
-          {/* T3 — Pagos */}
-          <div className="bento-t3" style={{ background: "#fff", border: "1px solid #EAE8E4", borderRadius: 20, padding: 26, display: "flex", flexDirection: "column" }}>
+          <div className="bento-t3" style={{ background: "var(--color-snow)", border: "1px solid var(--color-line)", borderRadius: 20, padding: 26, display: "flex", flexDirection: "column" }}>
             <Ic>
               <svg viewBox="0 0 24 24" width="18" height="18" {...STROKE}>
                 <rect x="3" y="6" width="18" height="14" rx="2" />
                 <path d="M3 10h18M16 15h2" />
               </svg>
             </Ic>
-            <h3 style={{ fontFamily: "var(--font-urbanist)", fontWeight: 700, fontSize: 19, letterSpacing: "-0.015em", margin: "0 0 8px" }}>Cobra en Lempiras, al instante</h3>
-            <p style={{ fontSize: 14, color: "#494848", margin: 0, maxWidth: 340 }}>
+            <h2 className="ds-h2" style={{ margin: "0 0 8px", color: "var(--color-gluon-grey)" }}>Cobra en Lempiras, al instante</h2>
+            <p className="ds-body" style={{ color: "var(--color-dusty-grey)", margin: 0, maxWidth: 340 }}>
               Desembolsos semanales a tu BAC o Ficohsa. Comisión desde 5%. Sin mínimos, sin costos ocultos, sin tarjetas de crédito bloqueadas.
             </p>
           </div>
 
-          {/* T4 — Promociones */}
-          <div className="bento-t4" style={{ background: "#fff", border: "1px solid #EAE8E4", borderRadius: 20, padding: 26, display: "flex", flexDirection: "column" }}>
+          <div className="bento-t4" style={{ background: "var(--color-snow)", border: "1px solid var(--color-line)", borderRadius: 20, padding: 26, display: "flex", flexDirection: "column" }}>
             <Ic>
               <svg viewBox="0 0 24 24" width="18" height="18" {...STROKE}>
                 <path d="M3 12V4h8l10 10-8 8Z" />
                 <circle cx="7.5" cy="7.5" r="1.4" fill="currentColor" />
               </svg>
             </Ic>
-            <h3 style={{ fontFamily: "var(--font-urbanist)", fontWeight: 700, fontSize: 19, letterSpacing: "-0.015em", margin: "0 0 8px" }}>Promociones</h3>
-            <p style={{ fontSize: 14, color: "#494848", margin: 0 }}>
+            <h2 className="ds-h2" style={{ margin: "0 0 8px", color: "var(--color-gluon-grey)" }}>Promociones</h2>
+            <p className="ds-body" style={{ color: "var(--color-dusty-grey)", margin: 0 }}>
               Early-bird, códigos por comunidad, descuentos por volumen.
             </p>
           </div>
 
-          {/* T5 — Audiencia */}
-          <div className="bento-t5" style={{ background: "#fff", border: "1px solid #EAE8E4", borderRadius: 20, padding: 26, display: "flex", flexDirection: "column" }}>
+          <div className="bento-t5" style={{ background: "var(--color-snow)", border: "1px solid var(--color-line)", borderRadius: 20, padding: 26, display: "flex", flexDirection: "column" }}>
             <Ic>
               <svg viewBox="0 0 24 24" width="18" height="18" {...STROKE}>
                 <circle cx="9" cy="8" r="4" />
@@ -214,21 +206,20 @@ export function Features() {
                 <path d="M22 20a5 5 0 0 0-5-5" />
               </svg>
             </Ic>
-            <h3 style={{ fontFamily: "var(--font-urbanist)", fontWeight: 700, fontSize: 19, letterSpacing: "-0.015em", margin: "0 0 8px" }}>Audiencia propia</h3>
-            <p style={{ fontSize: 14, color: "#494848", margin: 0 }}>
+            <h2 className="ds-h2" style={{ margin: "0 0 8px", color: "var(--color-gluon-grey)" }}>Audiencia propia</h2>
+            <p className="ds-body" style={{ color: "var(--color-dusty-grey)", margin: 0 }}>
               Sigue a tus fans, notifícales nuevos eventos, mide su LTV.
             </p>
           </div>
 
-          {/* T6 — Reseñas */}
-          <div className="bento-t6" style={{ background: "#fff", border: "1px solid #EAE8E4", borderRadius: 20, padding: 26, display: "flex", flexDirection: "column" }}>
+          <div className="bento-t6" style={{ background: "var(--color-snow)", border: "1px solid var(--color-line)", borderRadius: 20, padding: 26, display: "flex", flexDirection: "column" }}>
             <Ic>
               <svg viewBox="0 0 24 24" width="18" height="18" {...STROKE}>
                 <path d="M12 3.5 14.3 9l5.7.5-4.3 3.9 1.3 5.6L12 16.3 6.9 19l1.3-5.6L4 9.5 9.7 9Z" />
               </svg>
             </Ic>
-            <h3 style={{ fontFamily: "var(--font-urbanist)", fontWeight: 700, fontSize: 19, letterSpacing: "-0.015em", margin: "0 0 8px" }}>Reseñas y NPS</h3>
-            <p style={{ fontSize: 14, color: "#494848", margin: 0 }}>
+            <h2 className="ds-h2" style={{ margin: "0 0 8px", color: "var(--color-gluon-grey)" }}>Reseñas y NPS</h2>
+            <p className="ds-body" style={{ color: "var(--color-dusty-grey)", margin: 0 }}>
               Recoge feedback post-evento. Entiende qué mejora y qué enamora.
             </p>
           </div>

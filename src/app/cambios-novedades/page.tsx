@@ -23,9 +23,9 @@ const RELEASES = [
 ];
 
 const COLORS: Record<string, string> = {
-  Nuevo: "#F67010",
-  Mejora: "#0AA86B",
-  Arreglo: "#3D6BD7",
+  Nuevo: "var(--color-liquid-lava)",
+  Mejora: "var(--color-emerald-green)",
+  Arreglo: "var(--color-azure)",
 };
 
 export default function CambiosPage() {
@@ -35,7 +35,7 @@ export default function CambiosPage() {
       title={
         <>
           Lo que estamos{" "}
-          <span style={{ color: "#F67010" }}>construyendo.</span>
+          <span style={{ color: "var(--color-liquid-lava)" }}>construyendo.</span>
         </>
       }
       subtitle="Por ahora estamos preparando el terreno. El primer paso fue lanzar esta landing para contar qué viene con ALLONS."
@@ -49,31 +49,28 @@ export default function CambiosPage() {
               gridTemplateColumns: "180px 1fr",
               gap: 32,
               padding: "32px 0",
-              borderTop: i === 0 ? "1px solid #EAE8E4" : "none",
-              borderBottom: "1px solid #EAE8E4",
+              borderTop: i === 0 ? "1px solid var(--color-line)" : "none",
+              borderBottom: "1px solid var(--color-line)",
             }}
             className="changelog-row"
           >
             <div>
               <span
+                className="ds-body"
                 style={{
-                  fontFamily: "var(--font-jetbrains)",
-                  fontSize: 12,
-                  color: "#6B6A70",
-                  letterSpacing: "0.05em",
+                  color: "var(--color-dusty-grey)",
                 }}
               >
                 {release.date}
               </span>
               <div style={{ marginTop: 8 }}>
                 <span
+                  className="ds-chip-active"
                   style={{
-                    fontFamily: "var(--font-jetbrains)",
-                    fontSize: 10,
-                    letterSpacing: "0.1em",
+                    letterSpacing: "0.04em",
                     textTransform: "uppercase",
-                    background: `${COLORS[release.tag] ?? "#131516"}1A`,
-                    color: COLORS[release.tag] ?? "#131516",
+                    background: `color-mix(in srgb, ${COLORS[release.tag] ?? "var(--color-gluon-grey)"} 12%, transparent)`,
+                    color: COLORS[release.tag] ?? "var(--color-gluon-grey)",
                     padding: "4px 10px",
                     borderRadius: 999,
                   }}
@@ -84,31 +81,28 @@ export default function CambiosPage() {
             </div>
 
             <div>
-              <h3
+              <h2
+                className="ds-h2"
                 style={{
-                  fontFamily: "var(--font-urbanist)",
-                  fontWeight: 700,
-                  fontSize: 22,
-                  letterSpacing: "-0.015em",
                   margin: "0 0 12px",
-                  color: "#131516",
+                  color: "var(--color-gluon-grey)",
                 }}
               >
                 {release.title}
-              </h3>
+              </h2>
               <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 8 }}>
                 {release.items.map((item) => (
                   <li
                     key={item}
+                    className="ds-body"
                     style={{
-                      fontSize: 15,
-                      color: "#2B2A2F",
+                      color: "var(--color-ink-700)",
                       display: "flex",
                       gap: 10,
-                      lineHeight: 1.55,
+                      lineHeight: 1.6,
                     }}
                   >
-                    <span style={{ color: "#F67010", marginTop: 2 }}>•</span>
+                    <span style={{ color: "var(--color-liquid-lava)", marginTop: 2 }}>•</span>
                     {item}
                   </li>
                 ))}

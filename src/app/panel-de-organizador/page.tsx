@@ -59,27 +59,26 @@ export default function PanelPage() {
       title={
         <>
           Tu evento, controlado{" "}
-          <span style={{ color: "#F67010" }}>desde un solo lugar.</span>
+          <span style={{ color: "var(--color-liquid-lava)" }}>desde un solo lugar.</span>
         </>
       }
       subtitle="Olvídate de saltar entre apps, hojas de cálculo y mensajes de WhatsApp. Todo lo que necesitas para llenar la sala vive en el panel."
     >
       <div
         style={{
-          background: "#131516",
-          color: "#fff",
+          background: "var(--color-gluon-grey)",
+          color: "var(--color-snow)",
           borderRadius: 22,
-          padding: "60px 40px",
+          padding: "48px 40px",
           marginTop: 40,
-          marginBottom: 60,
+          marginBottom: 48,
           textAlign: "center",
         }}
       >
         <p
+          className="ds-chip-active"
           style={{
-            fontFamily: "var(--font-jetbrains)",
-            fontSize: 11,
-            letterSpacing: "0.12em",
+            letterSpacing: "0.04em",
             textTransform: "uppercase",
             color: "rgba(255,255,255,0.55)",
             margin: "0 0 16px",
@@ -88,12 +87,10 @@ export default function PanelPage() {
           Próximamente — vista previa
         </p>
         <h2
+          className="ds-display-md"
           style={{
-            fontFamily: "var(--font-urbanist)",
-            fontWeight: 700,
-            fontSize: 32,
-            letterSpacing: "-0.02em",
             margin: 0,
+            color: "var(--color-snow)",
           }}
         >
           El dashboard que vas a abrir todos los días.
@@ -113,49 +110,45 @@ export default function PanelPage() {
           <div
             key={section.title}
             style={{
-              background: "#fff",
-              border: "1px solid #EAE8E4",
+              background: "var(--color-snow)",
+              border: "1px solid var(--color-line)",
               borderRadius: 18,
               padding: 28,
             }}
           >
             <span
+              className="ds-chip-active"
               style={{
-                fontFamily: "var(--font-jetbrains)",
-                fontSize: 11,
-                color: "#F67010",
-                letterSpacing: "0.1em",
+                color: "var(--color-liquid-lava)",
+                letterSpacing: "0.04em",
               }}
             >
               0{i + 1}
             </span>
-            <h3
+            <h2
+              className="ds-h2"
               style={{
-                fontFamily: "var(--font-urbanist)",
-                fontWeight: 700,
-                fontSize: 22,
-                letterSpacing: "-0.015em",
                 margin: "8px 0 8px",
-                color: "#131516",
+                color: "var(--color-gluon-grey)",
               }}
             >
               {section.title}
-            </h3>
-            <p style={{ fontSize: 15, color: "#494848", margin: "0 0 16px", lineHeight: 1.55 }}>
+            </h2>
+            <p className="ds-body" style={{ color: "var(--color-dusty-grey)", margin: "0 0 16px", lineHeight: 1.6 }}>
               {section.desc}
             </p>
             <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 8 }}>
               {section.bullets.map((b) => (
                 <li
                   key={b}
+                  className="ds-body"
                   style={{
-                    fontSize: 14,
-                    color: "#2B2A2F",
+                    color: "var(--color-ink-700)",
                     display: "flex",
                     gap: 10,
                   }}
                 >
-                  <span style={{ color: "#F67010" }}>›</span>
+                  <span style={{ color: "var(--color-liquid-lava)" }}>›</span>
                   {b}
                 </li>
               ))}

@@ -18,8 +18,6 @@ const FAQS = [
     a: "Puedes cancelarlo desde el panel en cualquier momento. ALLONS notifica a los compradores y, si tu política lo indica, gestiona los reembolsos sin que tengas que hacer nada manual.",
   },
 
- 
-
   {
     q: "¿Cómo compran las entradas los asistentes?",
     a: "Todo pasa desde la app de ALLONS, disponible para iOS y Android. Buscan el evento, eligen su entrada, pagan y listo: el QR queda guardado ahí mismo para presentarlo en la puerta.",
@@ -51,46 +49,39 @@ export function FAQ() {
           style={{ display: "grid", gridTemplateColumns: "1fr 1.4fr", gap: 60, alignItems: "flex-start" }}
           className="faq-grid"
         >
-          {/* Left */}
           <div>
             <div
+              className="ds-chip-active"
               style={{
                 display: "inline-flex",
                 alignItems: "center",
                 gap: 8,
-                fontFamily: "var(--font-jetbrains)",
-                fontSize: 11,
-                color: "#F67010",
-                letterSpacing: "0.12em",
+                color: "var(--color-liquid-lava)",
+                letterSpacing: "0.04em",
                 textTransform: "uppercase",
-                fontWeight: 500,
                 marginBottom: 14,
               }}
             >
-              <span style={{ display: "inline-block", width: 20, height: 1, background: "#F67010" }} />
+              <span style={{ display: "inline-block", width: 20, height: 1, background: "var(--color-liquid-lava)" }} />
               Preguntas frecuentes
             </div>
 
-            <h2
+            <h1
+              className="ds-display-lg"
               style={{
-                fontFamily: "var(--font-urbanist)",
-                fontWeight: 700,
-                fontSize: "clamp(32px, 3.6vw, 48px)",
-                letterSpacing: "-0.028em",
-                lineHeight: 1.05,
                 margin: "0 0 18px",
-                color: "#131516",
+                color: "var(--color-gluon-grey)",
               }}
             >
               Antes de{" "}
-              <span style={{ color: "#F67010", fontStyle: "italic" }}>empezar.</span>
-            </h2>
+              <span style={{ color: "var(--color-liquid-lava)" }}>empezar.</span>
+            </h1>
 
-            <p style={{ fontSize: 17, color: "#494848", marginTop: 10 }}>
+            <p className="ds-lead" style={{ color: "var(--color-dusty-grey)", marginTop: 10 }}>
               ¿Algo más? Escríbenos a{" "}
               <a
                 href="mailto:soporte@allonsapp.com"
-                style={{ color: "#F67010", textDecoration: "underline" }}
+                style={{ color: "var(--color-liquid-lava)", textDecoration: "underline" }}
               >
                 soporte@allonsapp.com
               </a>
@@ -98,13 +89,12 @@ export function FAQ() {
             </p>
           </div>
 
-          {/* Right — accordion */}
-          <div style={{ borderTop: "1px solid #EAE8E4" }}>
+          <div style={{ borderTop: "1px solid var(--color-line)" }}>
             {FAQS.map((faq, i) => (
               <div
                 key={i}
                 style={{
-                  borderBottom: "1px solid #EAE8E4",
+                  borderBottom: "1px solid var(--color-line)",
                   padding: "20px 0",
                   cursor: "pointer",
                 }}
@@ -118,25 +108,23 @@ export function FAQ() {
                     gap: 16,
                   }}
                 >
-                  <h4
+                  <h2
+                    className="ds-h2"
                     style={{
-                      fontFamily: "var(--font-urbanist)",
-                      fontWeight: 600,
-                      fontSize: 17,
-                      letterSpacing: "-0.01em",
                       margin: 0,
-                      color: "#131516",
+                      color: "var(--color-gluon-grey)",
+                      fontWeight: open === i ? 600 : 500,
                     }}
                   >
                     {faq.q}
-                  </h4>
+                  </h2>
                   <div
                     style={{
                       width: 28,
                       height: 28,
                       borderRadius: "50%",
-                      background: open === i ? "#131516" : "#F3F3F3",
-                      color: open === i ? "#fff" : "#2B2A2F",
+                      background: open === i ? "var(--color-gluon-grey)" : "var(--color-ink-100)",
+                      color: open === i ? "var(--color-snow)" : "var(--color-ink-700)",
                       display: "grid",
                       placeItems: "center",
                       flexShrink: 0,
@@ -151,13 +139,14 @@ export function FAQ() {
                 </div>
 
                 <div
+                  className="ds-body"
                   style={{
-                    maxHeight: open === i ? 200 : 0,
+                    maxHeight: open === i ? 220 : 0,
                     overflow: "hidden",
                     transition: "max-height 260ms ease",
-                    color: "#494848",
-                    fontSize: 14.5,
+                    color: "var(--color-dusty-grey)",
                     paddingTop: open === i ? 12 : 0,
+                    lineHeight: 1.6,
                   }}
                 >
                   {faq.a}

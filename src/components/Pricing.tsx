@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 const CHECK = (
-  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#F67010" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="var(--color-liquid-lava)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
     <path d="m5 13 4 4 10-10" />
   </svg>
 );
@@ -56,32 +56,28 @@ export function Pricing() {
       id="pricing"
       style={{
         padding: "100px 0",
-        background: "#fff",
-        borderTop: "1px solid #EAE8E4",
-        borderBottom: "1px solid #EAE8E4",
+        background: "var(--color-snow)",
+        borderTop: "1px solid var(--color-line)",
+        borderBottom: "1px solid var(--color-line)",
       }}
     >
       <div style={{ maxWidth: 1240, margin: "0 auto", padding: "0 32px" }}>
-        {/* Kicker */}
         <div
+          className="ds-chip-active"
           style={{
             display: "inline-flex",
             alignItems: "center",
             gap: 8,
-            fontFamily: "var(--font-jetbrains)",
-            fontSize: 11,
-            color: "#F67010",
-            letterSpacing: "0.12em",
+            color: "var(--color-liquid-lava)",
+            letterSpacing: "0.04em",
             textTransform: "uppercase",
-            fontWeight: 500,
             marginBottom: 14,
           }}
         >
-          <span style={{ display: "inline-block", width: 20, height: 1, background: "#F67010" }} />
+          <span style={{ display: "inline-block", width: 20, height: 1, background: "var(--color-liquid-lava)" }} />
           Precios
         </div>
 
-        {/* Head row */}
         <div
           style={{
             display: "flex",
@@ -93,46 +89,40 @@ export function Pricing() {
           className="price-head-row"
         >
           <div>
-            <h2
+            <h1
+              className="ds-display-lg"
               style={{
-                fontFamily: "var(--font-urbanist)",
-                fontWeight: 700,
-                fontSize: "clamp(32px, 3.6vw, 48px)",
-                letterSpacing: "-0.028em",
-                lineHeight: 1.05,
                 margin: "0 0 10px",
-                color: "#131516",
+                color: "var(--color-gluon-grey)",
               }}
             >
               Empieza gratis.{" "}
-              <span style={{ color: "#F67010", fontStyle: "italic" }}>Crece sin sorpresas.</span>
-            </h2>
-            <p style={{ fontSize: 17, color: "#494848", margin: 0 }}>
+              <span style={{ color: "var(--color-liquid-lava)" }}>Crece sin sorpresas.</span>
+            </h1>
+            <p className="ds-lead" style={{ color: "var(--color-dusty-grey)", margin: 0 }}>
               Paga solo cuando vendas. Sin suscripciones obligatorias.
             </p>
           </div>
 
-          {/* Toggle */}
           <div
             style={{
               display: "inline-flex",
               padding: 4,
-              background: "#F3F3F3",
+              background: "var(--color-ink-100)",
               borderRadius: 10,
               flexShrink: 0,
             }}
           >
             <button
               onClick={() => setAnnual(false)}
+              className={annual ? "ds-chip" : "ds-chip-active"}
               style={{
                 all: "unset",
                 cursor: "pointer",
                 padding: "8px 16px",
-                fontSize: 13.5,
-                fontWeight: 500,
-                color: annual ? "#6B6A70" : "#131516",
+                color: annual ? "var(--color-dusty-grey)" : "var(--color-gluon-grey)",
                 borderRadius: 7,
-                background: annual ? "transparent" : "#fff",
+                background: annual ? "transparent" : "var(--color-snow)",
                 boxShadow: annual ? "none" : "0 1px 3px rgba(0,0,0,0.08)",
               }}
             >
@@ -140,27 +130,25 @@ export function Pricing() {
             </button>
             <button
               onClick={() => setAnnual(true)}
+              className={annual ? "ds-chip-active" : "ds-chip"}
               style={{
                 all: "unset",
                 cursor: "pointer",
                 padding: "8px 16px",
-                fontSize: 13.5,
-                fontWeight: 500,
-                color: annual ? "#131516" : "#6B6A70",
+                color: annual ? "var(--color-gluon-grey)" : "var(--color-dusty-grey)",
                 borderRadius: 7,
-                background: annual ? "#fff" : "transparent",
+                background: annual ? "var(--color-snow)" : "transparent",
                 boxShadow: annual ? "0 1px 3px rgba(0,0,0,0.08)" : "none",
               }}
             >
               Anual{" "}
-              <span style={{ fontFamily: "var(--font-jetbrains)", fontSize: 10.5, color: "#1E8755", marginLeft: 6 }}>
+              <span className="ds-chip" style={{ color: "var(--color-emerald-green)", marginLeft: 6 }}>
                 -20%
               </span>
             </button>
           </div>
         </div>
 
-        {/* Plans */}
         <div
           style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20, alignItems: "start" }}
           className="pricing-grid"
@@ -169,29 +157,28 @@ export function Pricing() {
             <div
               key={plan.name}
               style={{
-                background: plan.featured ? "#131516" : "#fff",
-                color: plan.featured ? "#fff" : "#131516",
-                border: plan.featured ? "1px solid #131516" : "1px solid #EAE8E4",
+                background: plan.featured ? "var(--color-gluon-grey)" : "var(--color-snow)",
+                color: plan.featured ? "var(--color-snow)" : "var(--color-gluon-grey)",
+                border: plan.featured ? "1px solid var(--color-gluon-grey)" : "1px solid var(--color-line)",
                 borderRadius: 20,
                 padding: 32,
                 position: "relative",
                 display: "flex",
                 flexDirection: "column",
                 transform: plan.featured ? "translateY(-8px)" : undefined,
-                boxShadow: plan.featured ? "0 30px 60px -20px rgba(19,21,22,0.25)" : undefined,
+                boxShadow: plan.featured ? "0 30px 60px -20px rgba(28,27,32,0.25)" : undefined,
               }}
             >
               {plan.tag && (
                 <span
+                  className="ds-chip-active"
                   style={{
                     position: "absolute",
                     top: 16,
                     right: 16,
-                    background: "#F67010",
-                    color: "#fff",
-                    fontFamily: "var(--font-jetbrains)",
-                    fontSize: 10.5,
-                    letterSpacing: "0.1em",
+                    background: "var(--color-liquid-lava)",
+                    color: "var(--color-snow)",
+                    letterSpacing: "0.04em",
                     padding: "4px 10px",
                     borderRadius: 999,
                     textTransform: "uppercase",
@@ -201,23 +188,20 @@ export function Pricing() {
                 </span>
               )}
 
-              <h3
+              <h2
+                className="ds-h2"
                 style={{
-                  fontFamily: "var(--font-urbanist)",
-                  fontWeight: 700,
-                  fontSize: 20,
-                  letterSpacing: "-0.015em",
                   margin: "0 0 6px",
-                  color: plan.featured ? "#fff" : "#131516",
+                  color: plan.featured ? "var(--color-snow)" : "var(--color-gluon-grey)",
                 }}
               >
                 {plan.name}
-              </h3>
+              </h2>
 
               <div
+                className="ds-body"
                 style={{
-                  fontSize: 13,
-                  color: plan.featured ? "rgba(255,255,255,0.55)" : "#6B6A70",
+                  color: plan.featured ? "rgba(255,255,255,0.55)" : "var(--color-dusty-grey)",
                   marginBottom: 22,
                 }}
               >
@@ -233,21 +217,18 @@ export function Pricing() {
                 }}
               >
                 <span
+                  className="ds-display-md"
                   style={{
-                    fontFamily: "var(--font-urbanist)",
-                    fontWeight: 700,
-                    fontSize: 44,
-                    letterSpacing: "-0.03em",
-                    color: plan.featured ? "#fff" : "#131516",
+                    color: plan.featured ? "var(--color-snow)" : "var(--color-gluon-grey)",
                   }}
                 >
                   {annual ? plan.priceAnnual : plan.priceEvent}
                 </span>
                 {(annual ? plan.unitAnnual : plan.unitEvent) && (
                   <span
+                    className="ds-body"
                     style={{
-                      fontSize: 14,
-                      color: plan.featured ? "rgba(255,255,255,0.55)" : "#6B6A70",
+                      color: plan.featured ? "rgba(255,255,255,0.55)" : "var(--color-dusty-grey)",
                     }}
                   >
                     {annual ? plan.unitAnnual : plan.unitEvent}
@@ -268,12 +249,12 @@ export function Pricing() {
                 {plan.features.map((f) => (
                   <li
                     key={f}
+                    className="ds-body"
                     style={{
                       display: "flex",
                       alignItems: "flex-start",
                       gap: 10,
-                      fontSize: 14,
-                      color: plan.featured ? "rgba(255,255,255,0.8)" : "#2B2A2F",
+                      color: plan.featured ? "rgba(255,255,255,0.8)" : "var(--color-ink-700)",
                     }}
                   >
                     {CHECK}
@@ -284,6 +265,7 @@ export function Pricing() {
 
               <a
                 href={plan.cta === "Hablar con ventas" ? "/ventas" : "/registro"}
+                className="ds-btn ds-btn-active"
                 style={{
                   marginTop: "auto",
                   display: "flex",
@@ -291,25 +273,23 @@ export function Pricing() {
                   justifyContent: "center",
                   padding: "10px 18px",
                   borderRadius: 10,
-                  fontWeight: 600,
-                  fontSize: 14,
                   cursor: "pointer",
                   background:
                     plan.ctaStyle === "accent"
-                      ? "#F67010"
+                      ? "var(--color-liquid-lava)"
                       : plan.featured
                       ? "transparent"
-                      : "#fff",
+                      : "var(--color-snow)",
                   color:
                     plan.ctaStyle === "accent"
-                      ? "#fff"
+                      ? "var(--color-snow)"
                       : plan.featured
-                      ? "#fff"
-                      : "#131516",
+                      ? "var(--color-snow)"
+                      : "var(--color-gluon-grey)",
                   border:
                     plan.featured
                       ? "1px solid rgba(255,255,255,0.2)"
-                      : "1px solid #E7E7E7",
+                      : "1px solid var(--color-line)",
                 }}
               >
                 {plan.cta}

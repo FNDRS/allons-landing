@@ -102,15 +102,12 @@ export default function TerminosPage() {
     >
       <div style={{ maxWidth: 760, paddingBottom: 80, marginTop: 40 }}>
         {SECTIONS.map((s) => (
-          <div key={s.title} style={{ marginBottom: 36 }}>
+          <div key={s.title} style={{ marginBottom: 32 }}>
             <h2
+              className="ds-h2"
               style={{
-                fontFamily: "var(--font-urbanist)",
-                fontWeight: 700,
-                fontSize: 20,
-                letterSpacing: "-0.015em",
                 margin: "0 0 12px",
-                color: "#131516",
+                color: "var(--color-gluon-grey)",
               }}
             >
               {s.title}
@@ -118,9 +115,9 @@ export default function TerminosPage() {
             {s.body.map((p, i) => (
               <p
                 key={i}
+                className="ds-body"
                 style={{
-                  fontSize: 15,
-                  color: "#2B2A2F",
+                  color: "var(--color-ink-700)",
                   lineHeight: 1.7,
                   margin: "0 0 12px",
                 }}

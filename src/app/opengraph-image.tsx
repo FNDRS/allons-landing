@@ -17,8 +17,8 @@ export default function Image() {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
-          background: "#FAF9F7",
-          color: "#131516",
+          background: "#FBFBFB",
+          color: "#1C1B20",
           padding: 72,
           position: "relative",
           overflow: "hidden",
@@ -45,7 +45,7 @@ export default function Image() {
             width: 520,
             height: 520,
             borderRadius: "50%",
-            background: "#131516",
+            background: "#1C1B20",
             opacity: 0.08,
           }}
         />
@@ -63,8 +63,8 @@ export default function Image() {
           <div
             style={{
               fontSize: 34,
-              fontWeight: 800,
-              letterSpacing: "-0.03em",
+              fontWeight: 600,
+              letterSpacing: "-0.01em",
             }}
           >
             ALLONS
@@ -76,10 +76,10 @@ export default function Image() {
             style={{
               display: "flex",
               fontSize: 20,
-              letterSpacing: "0.14em",
+              letterSpacing: "0.04em",
               textTransform: "uppercase",
               color: "#F67010",
-              fontWeight: 700,
+              fontWeight: 600,
             }}
           >
             Eventos en Honduras
@@ -87,10 +87,10 @@ export default function Image() {
           <div
             style={{
               display: "flex",
-              fontSize: 78,
-              lineHeight: 0.98,
-              letterSpacing: "-0.055em",
-              fontWeight: 800,
+              fontSize: 72,
+              lineHeight: 1.05,
+              letterSpacing: "-0.02em",
+              fontWeight: 600,
             }}
           >
             Ticketing, pagos y control para llenar tu evento.
@@ -101,9 +101,10 @@ export default function Image() {
           style={{
             display: "flex",
             gap: 18,
-            fontSize: 24,
-            color: "#494848",
+            fontSize: 22,
+            color: "#878787",
             alignItems: "center",
+            fontWeight: 500,
           }}
         >
           <span>QR en puerta</span>

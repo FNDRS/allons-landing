@@ -36,52 +36,46 @@ export default function SobreNosotrosPage() {
       title={
         <>
           Una herramienta hondureña para los que{" "}
-          <span style={{ color: "#F67010" }}>llenan salas.</span>
+          <span style={{ color: "var(--color-liquid-lava)" }}>llenan salas.</span>
         </>
       }
       subtitle="ALLONS nació porque organizar un evento en Honduras todavía se siente como armar un rompecabezas y mucho trabajo en papel o excel. Queremos cambiar eso."
     >
       <div
         style={{
-          background: "#FAF7F2",
-          border: "1px solid #EAE8E4",
+          background: "color-mix(in srgb, var(--color-liquid-lava) 6%, var(--color-snow))",
+          border: "1px solid var(--color-line)",
           borderRadius: 22,
-          padding: "48px 40px",
+          padding: "40px 36px",
           marginTop: 40,
-          marginBottom: 60,
+          marginBottom: 48,
         }}
       >
         <h2
+          className="ds-display-md"
           style={{
-            fontFamily: "var(--font-urbanist)",
-            fontWeight: 700,
-            fontSize: 28,
-            letterSpacing: "-0.02em",
-            margin: "0 0 16px",
-            color: "#131516",
+            margin: "0 0 18px",
+            color: "var(--color-gluon-grey)",
           }}
         >
           Nuestra historia
         </h2>
-        <p style={{ fontSize: 16, color: "#2B2A2F", lineHeight: 1.7, margin: "0 0 14px" }}>
+        <p className="ds-lead" style={{ color: "var(--color-ink-700)", lineHeight: 1.7, margin: "0 0 14px" }}>
           ALLONS empezó en una conversación entre amigos que organizaban eventos pequeños en Tegucigalpa. Cada vez que querían vender entradas, terminaban usando tres herramientas distintas: una para crear el flyer, otra para cobrar, otra para llevar la lista en la puerta.
         </p>
-        <p style={{ fontSize: 16, color: "#2B2A2F", lineHeight: 1.7, margin: "0 0 14px" }}>
+        <p className="ds-lead" style={{ color: "var(--color-ink-700)", lineHeight: 1.7, margin: "0 0 14px" }}>
           Las plataformas globales eran caras, complicadas, y ni siquiera entendían lempiras. Decidimos construir lo que nos hubiera gustado tener.
         </p>
-        <p style={{ fontSize: 16, color: "#2B2A2F", lineHeight: 1.7, margin: 0 }}>
+        <p className="ds-lead" style={{ color: "var(--color-ink-700)", lineHeight: 1.7, margin: 0 }}>
           Hoy ALLONS es una plataforma que cualquier organizador en Honduras puede usar para crear, vender y operar su evento sin pelearse con la tecnología.
         </p>
       </div>
 
       <h2
+        className="ds-display-md"
         style={{
-          fontFamily: "var(--font-urbanist)",
-          fontWeight: 700,
-          fontSize: 28,
-          letterSpacing: "-0.02em",
           margin: "60px 0 24px",
-          color: "#131516",
+          color: "var(--color-gluon-grey)",
         }}
       >
         En qué creemos
@@ -100,24 +94,22 @@ export default function SobreNosotrosPage() {
           <div
             key={v.title}
             style={{
-              background: "#fff",
-              border: "1px solid #EAE8E4",
+              background: "var(--color-snow)",
+              border: "1px solid var(--color-line)",
               borderRadius: 16,
-              padding: 28,
+              padding: 24,
             }}
           >
-            <h3
+            <h2
+              className="ds-h2"
               style={{
-                fontFamily: "var(--font-urbanist)",
-                fontWeight: 600,
-                fontSize: 18,
                 margin: "0 0 8px",
-                color: "#131516",
+                color: "var(--color-gluon-grey)",
               }}
             >
               {v.title}
-            </h3>
-            <p style={{ fontSize: 15, color: "#494848", margin: 0, lineHeight: 1.6 }}>
+            </h2>
+            <p className="ds-body" style={{ color: "var(--color-dusty-grey)", margin: 0, lineHeight: 1.6 }}>
               {v.desc}
             </p>
           </div>

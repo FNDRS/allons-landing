@@ -6,12 +6,11 @@ export function Footer() {
     <footer
       style={{
         padding: "60px 0 40px",
-        borderTop: "1px solid #EAE8E4",
+        borderTop: "1px solid var(--color-line)",
         marginTop: 80,
       }}
     >
       <div style={{ maxWidth: 1240, margin: "0 auto", padding: "0 32px" }}>
-        {/* Grid */}
         <div
           style={{
             display: "grid",
@@ -21,17 +20,15 @@ export function Footer() {
           }}
           className="footer-grid"
         >
-          {/* About */}
           <div>
             <Link href="/">
               <Image src="/logo.png" alt="Allons" width={110} height={34} style={{ height: 30, width: "auto" }} />
             </Link>
-            <p style={{ fontSize: 14, color: "#494848", maxWidth: 320, margin: "14px 0 0" }}>
+            <p className="ds-body" style={{ color: "var(--color-dusty-grey)", maxWidth: 320, margin: "14px 0 0" }}>
               Conectamos a quienes crean eventos con quienes buscan experiencias en su ciudad.
             </p>
           </div>
 
-          {/* Links */}
           {[
             {
               title: "Producto",
@@ -50,21 +47,23 @@ export function Footer() {
             },
           ].map((col) => (
             <div key={col.title}>
-              <h5
+              <h2
+                className="ds-h2"
                 style={{
-                  fontFamily: "var(--font-urbanist)",
-                  fontWeight: 600,
-                  fontSize: 14,
                   margin: "0 0 14px",
-                  color: "#131516",
+                  color: "var(--color-gluon-grey)",
                 }}
               >
                 {col.title}
-              </h5>
+              </h2>
               <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 10 }}>
                 {col.links.map((link, i) => (
                   <li key={link}>
-                    <Link href={col.hrefs[i]} style={{ fontSize: 13.5, color: "#494848" }}>
+                    <Link
+                      href={col.hrefs[i]}
+                      className="ds-body"
+                      style={{ color: "var(--color-dusty-grey)" }}
+                    >
                       {link}
                     </Link>
                   </li>
@@ -74,23 +73,20 @@ export function Footer() {
           ))}
         </div>
 
-        {/* Bottom */}
         <div
+          className="footer-bottom ds-body"
           style={{
             paddingTop: 26,
-            borderTop: "1px solid #EAE8E4",
+            borderTop: "1px solid var(--color-line)",
             display: "flex",
             justifyContent: "space-between",
             alignItems: "center",
-            fontSize: 13,
-            color: "#6B6A70",
-            fontFamily: "var(--font-jetbrains)",
+            color: "var(--color-dusty-grey)",
           }}
-          className="footer-bottom"
         >
           <span>© 2026 ALLONS · Hecho en Honduras con orgullo.</span>
           <div style={{ display: "flex", gap: 20 }}>
-            <Link target="_blank" href="https://www.instagram.com/allons.hn?igsh=MWNjbGpqeGduaHQ0NA==" style={{ color: "#6B6A70" }}>
+            <Link target="_blank" href="https://www.instagram.com/allons.hn?igsh=MWNjbGpqeGduaHQ0NA==" style={{ color: "var(--color-dusty-grey)" }}>
               Instagram
             </Link>
           </div>

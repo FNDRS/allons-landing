@@ -11,8 +11,8 @@ export function HowItWorks() {
       <div style={{ maxWidth: 1240, margin: "0 auto", padding: "0 32px" }}>
         <div
           style={{
-            background: "radial-gradient(circle at 80% -40%, rgba(246,112,16,0.24), transparent 60%), linear-gradient(135deg, #131516 0%, #2B2A2F 100%)",
-            color: "#fff",
+            background: "radial-gradient(circle at 80% -40%, rgba(246,112,16,0.24), transparent 60%), linear-gradient(135deg, var(--color-gluon-grey) 0%, #2B2A2F 100%)",
+            color: "var(--color-snow)",
             borderRadius: 28,
             padding: "72px",
             position: "relative",
@@ -20,44 +20,40 @@ export function HowItWorks() {
           }}
           className="flow-card"
         >
-          {/* Kicker */}
           <div
+            className="ds-chip-active"
             style={{
               display: "inline-flex",
               alignItems: "center",
               gap: 8,
-              fontFamily: "var(--font-jetbrains)",
-              fontSize: 11,
-              color: "#F67010",
-              letterSpacing: "0.12em",
+              color: "var(--color-liquid-lava)",
+              letterSpacing: "0.04em",
               textTransform: "uppercase",
-              fontWeight: 500,
               marginBottom: 14,
               position: "relative",
             }}
           >
-            <span style={{ display: "inline-block", width: 20, height: 1, background: "#F67010" }} />
+            <span style={{ display: "inline-block", width: 20, height: 1, background: "var(--color-liquid-lava)" }} />
             Cómo funciona
           </div>
 
-          <h2
+          <h1
+            className="ds-display-lg"
             style={{
-              fontFamily: "var(--font-urbanist)",
-              fontWeight: 700,
-              fontSize: "clamp(32px, 3.6vw, 48px)",
-              letterSpacing: "-0.028em",
-              lineHeight: 1.05,
               margin: "0 0 18px",
-              color: "#fff",
+              color: "var(--color-snow)",
               maxWidth: 700,
               position: "relative",
             }}
           >
             De la idea al lleno total en{" "}
-            <span style={{ color: "#F67010", fontStyle: "italic" }}>4 pasos.</span>
-          </h2>
+            <span style={{ color: "var(--color-liquid-lava)" }}>4 pasos.</span>
+          </h1>
 
-          <p style={{ fontSize: 17, color: "rgba(255,255,255,0.65)", maxWidth: 620, margin: "0 0 40px", position: "relative" }}>
+          <p
+            className="ds-lead"
+            style={{ color: "rgba(255,255,255,0.65)", maxWidth: 620, margin: "0 0 40px", position: "relative" }}
+          >
             Sin desarrolladores, sin contratos largos, sin hojas de Excel. Sube tu evento por la mañana y vende la primera entrada antes del almuerzo.
           </p>
 
@@ -81,29 +77,28 @@ export function HowItWorks() {
                 }}
               >
                 <div
+                  className="ds-chip-active"
                   style={{
-                    fontFamily: "var(--font-jetbrains)",
-                    fontSize: 11,
-                    color: "#F67010",
-                    letterSpacing: "0.1em",
+                    color: "var(--color-liquid-lava)",
+                    letterSpacing: "0.04em",
                     marginBottom: 14,
                   }}
                 >
                   {step.num}
                 </div>
-                <h4
+                <h2
+                  className="ds-h2"
                   style={{
-                    fontFamily: "var(--font-urbanist)",
-                    fontWeight: 700,
-                    fontSize: 18,
-                    letterSpacing: "-0.015em",
                     margin: "0 0 8px",
-                    color: "#fff",
+                    color: "var(--color-snow)",
                   }}
                 >
                   {step.title}
-                </h4>
-                <p style={{ fontSize: 13.5, color: "rgba(255,255,255,0.6)", margin: 0, lineHeight: 1.5 }}>
+                </h2>
+                <p
+                  className="ds-body"
+                  style={{ color: "rgba(255,255,255,0.6)", margin: 0, lineHeight: 1.6 }}
+                >
                   {step.desc}
                 </p>
               </div>

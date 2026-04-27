@@ -20,7 +20,7 @@ export default function RegistroPage() {
       title={
         <>
           Estamos abriendo ALLONS{" "}
-          <span style={{ color: "#F67010" }}>por invitación.</span>
+          <span style={{ color: "var(--color-liquid-lava)" }}>por invitación.</span>
         </>
       }
       subtitle="El registro público todavía no está abierto. Dejanos tus datos por correo y te avisamos cuando puedas crear tu primer evento."
@@ -28,16 +28,15 @@ export default function RegistroPage() {
       <div style={{ marginTop: 40, paddingBottom: 80 }}>
         <a
           href="mailto:soporte@allonsapp.com?subject=Quiero crear mi cuenta en ALLONS"
+          className="ds-btn ds-btn-active"
           style={{
             display: "inline-flex",
             alignItems: "center",
             gap: 8,
-            padding: "14px 22px",
+            padding: "12px 22px",
             borderRadius: 12,
-            fontWeight: 600,
-            fontSize: 15,
-            color: "#fff",
-            background: "#F67010",
+            color: "var(--color-snow)",
+            background: "var(--color-liquid-lava)",
           }}
         >
           Solicitar invitación

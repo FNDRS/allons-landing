@@ -17,33 +17,29 @@ export function PageShell({ eyebrow, title, subtitle, children }: PageShellProps
           <div style={{ maxWidth: 1240, margin: "0 auto", padding: "0 32px" }}>
             {eyebrow && (
               <div
+                className="ds-chip-active"
                 style={{
                   display: "inline-flex",
                   alignItems: "center",
                   gap: 8,
-                  fontFamily: "var(--font-jetbrains)",
-                  fontSize: 11,
-                  color: "#F67010",
-                  letterSpacing: "0.12em",
+                  fontSize: 14,
+                  fontWeight: 600,
+                  color: "var(--color-liquid-lava)",
+                  letterSpacing: "0.02em",
                   textTransform: "uppercase",
-                  fontWeight: 500,
                   marginBottom: 14,
                 }}
               >
-                <span style={{ display: "inline-block", width: 20, height: 1, background: "#F67010" }} />
+                <span style={{ display: "inline-block", width: 20, height: 1, background: "var(--color-liquid-lava)" }} />
                 {eyebrow}
               </div>
             )}
 
             <h1
+              className="ds-display-lg"
               style={{
-                fontFamily: "var(--font-urbanist)",
-                fontWeight: 700,
-                fontSize: "clamp(36px, 4.4vw, 60px)",
-                letterSpacing: "-0.028em",
-                lineHeight: 1.04,
                 margin: "0 0 18px",
-                color: "#131516",
+                color: "var(--color-gluon-grey)",
                 maxWidth: 880,
               }}
             >
@@ -52,12 +48,11 @@ export function PageShell({ eyebrow, title, subtitle, children }: PageShellProps
 
             {subtitle && (
               <p
+                className="ds-lead"
                 style={{
-                  fontSize: 18,
-                  color: "#494848",
+                  color: "var(--color-dusty-grey)",
                   maxWidth: 680,
                   margin: 0,
-                  lineHeight: 1.55,
                 }}
               >
                 {subtitle}

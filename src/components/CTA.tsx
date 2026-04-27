@@ -5,8 +5,8 @@ export function CTA() {
         <div
           style={{
             background:
-              "radial-gradient(circle at 20% 30%, rgba(246,112,16,0.18), transparent 50%), linear-gradient(135deg, #131516 0%, #2B2A2F 100%)",
-            color: "#fff",
+              "radial-gradient(circle at 20% 30%, rgba(246,112,16,0.18), transparent 50%), linear-gradient(135deg, var(--color-gluon-grey) 0%, #2B2A2F 100%)",
+            color: "var(--color-snow)",
             borderRadius: 28,
             padding: "80px 72px",
             position: "relative",
@@ -15,26 +15,22 @@ export function CTA() {
           }}
           className="cta-card"
         >
-          <h2
+          <h1
+            className="ds-display-xl"
             style={{
-              fontFamily: "var(--font-urbanist)",
-              fontWeight: 800,
-              fontSize: "clamp(40px, 5vw, 68px)",
-              letterSpacing: "-0.035em",
-              lineHeight: 1,
               margin: "0 0 20px",
-              color: "#fff",
+              color: "var(--color-snow)",
             }}
           >
-            Tu próximo <span style={{ color: "#F67010", fontStyle: "italic" }}>sold out</span>
+            Tu próximo <span style={{ color: "var(--color-liquid-lava)" }}>sold out</span>
             <br />
             empieza{" "}
-            <span style={{ color: "#F67010", fontStyle: "bold" }}>hoy.</span>
-          </h2>
+            <span style={{ color: "var(--color-liquid-lava)" }}>hoy.</span>
+          </h1>
 
           <p
+            className="ds-lead"
             style={{
-              fontSize: 18,
               color: "rgba(255,255,255,0.7)",
               maxWidth: 540,
               margin: "0 auto 32px",
@@ -46,36 +42,34 @@ export function CTA() {
           <div style={{ display: "inline-flex", gap: 12 }}>
             <a
               href="/registro"
+              className="ds-btn ds-btn-active"
               style={{
                 display: "inline-flex",
                 alignItems: "center",
                 gap: 8,
-                padding: "14px 22px",
+                padding: "12px 22px",
                 borderRadius: 12,
-                fontWeight: 600,
-                fontSize: 15,
-                color: "#fff",
-                background: "#F67010",
+                color: "var(--color-snow)",
+                background: "var(--color-liquid-lava)",
                 border: "1px solid transparent",
                 cursor: "pointer",
               }}
             >
               Abrir mi panel gratis
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M5 12h14M13 5l7 7-7 7" />
               </svg>
             </a>
             <a
               href="/ventas"
+              className="ds-btn ds-btn-active"
               style={{
                 display: "inline-flex",
                 alignItems: "center",
                 gap: 8,
-                padding: "14px 22px",
+                padding: "12px 22px",
                 borderRadius: 12,
-                fontWeight: 600,
-                fontSize: 15,
-                color: "#fff",
+                color: "var(--color-snow)",
                 background: "rgba(255,255,255,0.08)",
                 border: "1px solid transparent",
                 cursor: "pointer",
@@ -86,15 +80,14 @@ export function CTA() {
           </div>
 
           <div
+            className="ds-chip-active"
             style={{
               marginTop: 20,
-              fontFamily: "var(--font-jetbrains)",
-              fontSize: 11.5,
               color: "rgba(255,255,255,0.5)",
-              letterSpacing: "0.05em",
+              letterSpacing: "0.04em",
             }}
           >
-             EVENTOS ILIMITADOS · SOPORTE EN ESPAÑOL · DESEMBOLSOS EN HNL
+            EVENTOS ILIMITADOS · SOPORTE EN ESPAÑOL · DESEMBOLSOS EN HNL
           </div>
         </div>
       </div>

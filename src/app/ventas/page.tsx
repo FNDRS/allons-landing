@@ -20,7 +20,7 @@ export default function VentasPage() {
       title={
         <>
           Contanos qué evento querés{" "}
-          <span style={{ color: "#F67010" }}>mover con ALLONS.</span>
+          <span style={{ color: "var(--color-liquid-lava)" }}>mover con ALLONS.</span>
         </>
       }
       subtitle="Por ahora atendemos ventas por correo. Mandanos el nombre del evento, ciudad, fecha estimada y cantidad esperada de asistentes."
@@ -28,16 +28,15 @@ export default function VentasPage() {
       <div style={{ marginTop: 40, paddingBottom: 80 }}>
         <a
           href="mailto:soporte@allonsapp.com?subject=Quiero hablar con ventas de ALLONS"
+          className="ds-btn ds-btn-active"
           style={{
             display: "inline-flex",
             alignItems: "center",
             gap: 8,
-            padding: "14px 22px",
+            padding: "12px 22px",
             borderRadius: 12,
-            fontWeight: 600,
-            fontSize: 15,
-            color: "#fff",
-            background: "#F67010",
+            color: "var(--color-snow)",
+            background: "var(--color-liquid-lava)",
           }}
         >
           Escribir a ventas
