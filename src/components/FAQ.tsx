@@ -4,21 +4,40 @@ import { useState } from "react";
 
 const FAQS = [
   {
-    q: "¿Cuánto tarda en acreditarse mi dinero?",
-    a: "Los desembolsos se procesan cada viernes. El dinero llega a tu cuenta BAC, Ficohsa o Banpaís en máximo 2 días hábiles.",
-  },
-  {
-    q: "¿Puedo vender entradas presenciales?",
-    a: "Sí. El modo \"Pago en el local\" te permite reservar cupo y cobrar en puerta. La app genera el QR y registra al asistente.",
-  },
-  {
-    q: "¿Qué pasa si un asistente pide reembolso?",
-    a: "Tú defines la política: reembolso parcial, total o intransferible. ALLONS procesa el movimiento y lo descuenta del próximo desembolso.",
+    q: "¿Puedo tener varios eventos activos al mismo tiempo?",
+    a: "Sí, sin límite. Cada evento tiene su propio panel, su propio link de venta y sus propios reportes. Puedes manejarlos todos desde la misma cuenta.",
   },
 
   {
-    q: "¿Necesito una tarjeta de crédito para empezar?",
-    a: "No. Solo necesitas una cuenta bancaria hondureña y tu RTN (o DNI si es persona natural).",
+    q: "¿Cómo llega la entrada al asistente?",
+    a: "Al completar la compra, el sistema le manda el QR por correo de forma automática. También puede descargarlo desde el link de confirmación.",
+  },
+
+  {
+    q: "¿Qué pasa si cancelo mi evento?",
+    a: "Puedes cancelarlo desde el panel en cualquier momento. ALLONS notifica a los compradores y, si tu política lo indica, gestiona los reembolsos sin que tengas que hacer nada manual.",
+  },
+
+ 
+
+  {
+    q: "¿Cómo compran las entradas los asistentes?",
+    a: "Todo pasa desde la app de ALLONS, disponible para iOS y Android. Buscan el evento, eligen su entrada, pagan y listo: el QR queda guardado ahí mismo para presentarlo en la puerta.",
+  },
+
+  {
+    q: "¿Cómo valido las entradas en la puerta?",
+    a: "Desde la misma app de ALLONS en modo organizador. Escaneas el QR del asistente y la app te indica al instante si es válido, ya fue usado o es falso.",
+  },
+
+  {
+    q: "¿Puedo ver en tiempo real cuántas entradas se han vendido?",
+    a: "Sí. El panel del organizador se actualiza en vivo. Ves ventas, ingresos y asistencia conforme va pasando, sin necesidad de refrescar ni exportar nada.",
+  },
+
+  {
+    q: "¿Mis datos y los de mis compradores están seguros?",
+    a: "Sí. Las transacciones van cifradas y no almacenamos datos de tarjeta. Cumplimos con los estándares de seguridad de pagos en línea.",
   },
 ];
 

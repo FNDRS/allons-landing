@@ -129,7 +129,7 @@ export function Hero() {
           </div>
 
           {/* Meta stats */}
-          <div
+       {/*    <div
             style={{
               marginTop: 32,
               display: "flex",
@@ -171,7 +171,7 @@ export function Hero() {
                 </div>
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
 
         {/* Right — dark art card

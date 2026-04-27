@@ -13,7 +13,7 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-        <LogoStrip />
+        {/* <LogoStrip /> */}
         <Features />
         <HowItWorks />
         {/* <Reviews /> */}

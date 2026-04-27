@@ -80,8 +80,7 @@ export function Features() {
         </h2>
 
         <p style={{ fontSize: 17, color: "#494848", maxWidth: 620, margin: "0 0 40px" }}>
-          Desde la primera publicación hasta el cierre de caja: ALLONS reúne ticketing, pagos y análisis en un solo panel diseñado para organizadores.
-        </p>
+        Publicas tu evento, vendes entradas y revisas cómo va todo desde un mismo lugar. Sin saltar entre apps ni armar reportes a mano en excel.        </p>
 
         {/* Bento grid */}
         <div
