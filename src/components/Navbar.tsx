@@ -54,7 +54,6 @@ export function Navbar() {
           {[
             { label: "Producto", href: "#features" },
             { label: "Cómo funciona", href: "#flow" },
-            { label: "Precios", href: "#pricing" },
             { label: "Preguntas", href: "#faq" },
           ].map((link) => (
             <a

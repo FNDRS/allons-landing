@@ -15,10 +15,7 @@ const FAQS = [
     q: "¿Qué pasa si un asistente pide reembolso?",
     a: "Tú defines la política: reembolso parcial, total o intransferible. ALLONS procesa el movimiento y lo descuenta del próximo desembolso.",
   },
-  {
-    q: "¿ALLONS emite factura fiscal?",
-    a: "Sí. Emitimos factura electrónica por el servicio ALLONS (comisión) y te entregamos reporte listo para que tu contador facture al asistente final.",
-  },
+
   {
     q: "¿Necesito una tarjeta de crédito para empezar?",
     a: "No. Solo necesitas una cuenta bancaria hondureña y tu RTN (o DNI si es persona natural).",

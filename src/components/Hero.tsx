@@ -65,7 +65,7 @@ export function Hero() {
             }}
           >
             Crea, vende y{" "}
-            <span style={{ color: "#F67010", fontStyle: "italic" }}>llena</span>
+            <span style={{ color: "#F67010", fontStyle: "bold" }}>promociona</span>
             <br />
             tus eventos en Honduras.
           </h1>
