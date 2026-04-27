@@ -24,7 +24,7 @@ const homeJsonLd = {
       "@id": "https://allonsapp.com/#organization",
       name: "ALLONS",
       url: "https://allonsapp.com",
-      logo: "https://allonsapp.com/favicon.ico",
+      logo: "https://allonsapp.com/favicon.png",
       sameAs: ["https://www.instagram.com/allons.hn"],
       contactPoint: [
         {

@@ -73,7 +73,7 @@ export function Navbar() {
         {/* CTA */}
         <div style={{ marginLeft: "auto", display: "flex", alignItems: "center", gap: 8 }}>
           <a
-            href="#"
+            href="/login"
             style={{
               display: "inline-flex",
               alignItems: "center",
@@ -91,7 +91,7 @@ export function Navbar() {
             Iniciar sesión
           </a>
           <a
-            href="#"
+            href="/registro"
             style={{
               display: "inline-flex",
               alignItems: "center",

@@ -45,7 +45,7 @@ export function CTA() {
 
           <div style={{ display: "inline-flex", gap: 12 }}>
             <a
-              href="#"
+              href="/registro"
               style={{
                 display: "inline-flex",
                 alignItems: "center",
@@ -66,7 +66,7 @@ export function CTA() {
               </svg>
             </a>
             <a
-              href="#"
+              href="/ventas"
               style={{
                 display: "inline-flex",
                 alignItems: "center",

@@ -85,7 +85,7 @@ export function Hero() {
           {/* CTAs */}
           <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
             <a
-              href="#"
+              href="/registro"
               style={{
                 display: "inline-flex",
                 alignItems: "center",
@@ -106,7 +106,7 @@ export function Hero() {
               </svg>
             </a>
             <a
-              href="#"
+              href="/demo"
               style={{
                 display: "inline-flex",
                 alignItems: "center",

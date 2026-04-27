@@ -283,7 +283,7 @@ export function Pricing() {
               </ul>
 
               <a
-                href="#"
+                href={plan.cta === "Hablar con ventas" ? "/ventas" : "/registro"}
                 style={{
                   marginTop: "auto",
                   display: "flex",
