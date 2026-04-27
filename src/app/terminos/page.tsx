@@ -2,8 +2,15 @@ import type { Metadata } from "next";
 import { PageShell } from "@/components/PageShell";
 
 export const metadata: Metadata = {
-  title: "Términos y condiciones · ALLONS",
+  title: "Términos y condiciones",
   description: "Términos y condiciones de uso de la plataforma ALLONS.",
+  alternates: {
+    canonical: "/terminos",
+  },
+  robots: {
+    index: false,
+    follow: true,
+  },
 };
 
 const SECTIONS = [
@@ -81,7 +88,7 @@ const SECTIONS = [
   {
     title: "12. Contacto",
     body: [
-      "Para cualquier consulta sobre estos términos, escríbenos a hola@allons.app.",
+      "Para cualquier consulta sobre estos términos, escríbenos a hola@allonsapp.com.",
     ],
   },
 ];

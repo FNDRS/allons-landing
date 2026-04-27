@@ -2,9 +2,12 @@ import type { Metadata } from "next";
 import { PageShell } from "@/components/PageShell";
 
 export const metadata: Metadata = {
-  title: "Panel de organizador · ALLONS",
+  title: "Panel de organizador",
   description:
     "Un solo panel para crear, vender y operar tus eventos. Reportes en vivo, validación en puerta y control total desde tu celular.",
+  alternates: {
+    canonical: "/panel-de-organizador",
+  },
 };
 
 const SECTIONS = [

@@ -2,9 +2,12 @@ import type { Metadata } from "next";
 import { PageShell } from "@/components/PageShell";
 
 export const metadata: Metadata = {
-  title: "Funcionalidades · ALLONS",
+  title: "Funcionalidades",
   description:
     "Todo lo que ALLONS pone en tus manos para crear, vender y manejar eventos: ticketing, pagos, escaneo y reportes en vivo.",
+  alternates: {
+    canonical: "/funcionalidades",
+  },
 };
 
 const FEATURES = [

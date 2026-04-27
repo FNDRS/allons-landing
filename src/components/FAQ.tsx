@@ -89,10 +89,10 @@ export function FAQ() {
             <p style={{ fontSize: 17, color: "#494848", marginTop: 10 }}>
               ¿Algo más? Escríbenos a{" "}
               <a
-                href="mailto:hola@allons.app"
+                href="mailto:hola@allonsapp.com"
                 style={{ color: "#F67010", textDecoration: "underline" }}
               >
-                hola@allons.app
+                hola@allonsapp.com
               </a>
               .
             </p>

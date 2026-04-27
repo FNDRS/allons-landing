@@ -2,9 +2,12 @@ import type { Metadata } from "next";
 import { PageShell } from "@/components/PageShell";
 
 export const metadata: Metadata = {
-  title: "Sobre nosotros · ALLONS",
+  title: "Sobre nosotros",
   description:
     "ALLONS nació en Honduras con una idea simple: que organizar un evento sea tan emocionante como vivirlo.",
+  alternates: {
+    canonical: "/sobre-nosotros",
+  },
 };
 
 const VALUES = [

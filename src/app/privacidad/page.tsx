@@ -2,8 +2,15 @@ import type { Metadata } from "next";
 import { PageShell } from "@/components/PageShell";
 
 export const metadata: Metadata = {
-  title: "Política de privacidad · ALLONS",
+  title: "Política de privacidad",
   description: "Cómo recopilamos, usamos y protegemos tus datos personales en ALLONS.",
+  alternates: {
+    canonical: "/privacidad",
+  },
+  robots: {
+    index: false,
+    follow: true,
+  },
 };
 
 const SECTIONS = [
@@ -58,7 +65,7 @@ const SECTIONS = [
       "• Solicitar la corrección de datos inexactos.",
       "• Solicitar la eliminación de tu cuenta y de tus datos personales (sujeto a obligaciones legales de conservación).",
       "• Oponerte al tratamiento de tus datos para fines de marketing.",
-      "Para ejercer estos derechos, escríbenos a hola@allons.app.",
+      "Para ejercer estos derechos, escríbenos a hola@allonsapp.com.",
     ],
   },
   {
@@ -88,7 +95,7 @@ const SECTIONS = [
   {
     title: "11. Contacto",
     body: [
-      "Si tienes dudas sobre esta política o sobre cómo manejamos tus datos, escríbenos a hola@allons.app.",
+      "Si tienes dudas sobre esta política o sobre cómo manejamos tus datos, escríbenos a hola@allonsapp.com.",
     ],
   },
 ];

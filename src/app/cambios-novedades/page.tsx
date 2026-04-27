@@ -2,8 +2,11 @@ import type { Metadata } from "next";
 import { PageShell } from "@/components/PageShell";
 
 export const metadata: Metadata = {
-  title: "Cambios y novedades · ALLONS",
+  title: "Cambios y novedades",
   description: "El registro público de todo lo que estamos construyendo en ALLONS. Lo nuevo, lo mejorado y lo que viene.",
+  alternates: {
+    canonical: "/cambios-novedades",
+  },
 };
 
 const RELEASES = [
@@ -12,7 +15,7 @@ const RELEASES = [
     tag: "Nuevo",
     title: "Lanzamiento de la landing page",
     items: [
-      "Publicamos la primera versión de allons.app.",
+      "Publicamos la primera versión de allonsapp.com.",
       "Incluye información para organizadores, preguntas frecuentes y los primeros detalles del producto.",
       "Seguiremos actualizando esta sección conforme avancemos con el lanzamiento de la app.",
     ],
