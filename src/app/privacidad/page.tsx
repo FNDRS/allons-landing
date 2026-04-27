@@ -65,7 +65,7 @@ const SECTIONS = [
       "• Solicitar la corrección de datos inexactos.",
       "• Solicitar la eliminación de tu cuenta y de tus datos personales (sujeto a obligaciones legales de conservación).",
       "• Oponerte al tratamiento de tus datos para fines de marketing.",
-      "Para ejercer estos derechos, escríbenos a hola@allonsapp.com.",
+      "Para ejercer estos derechos, escríbenos a soporte@allonsapp.com.",
     ],
   },
   {
@@ -95,7 +95,7 @@ const SECTIONS = [
   {
     title: "11. Contacto",
     body: [
-      "Si tienes dudas sobre esta política o sobre cómo manejamos tus datos, escríbenos a hola@allonsapp.com.",
+      "Si tienes dudas sobre esta política o sobre cómo manejamos tus datos, escríbenos a soporte@allonsapp.com.",
     ],
   },
 ];

@@ -29,7 +29,7 @@ const homeJsonLd = {
       contactPoint: [
         {
           "@type": "ContactPoint",
-          email: "hola@allonsapp.com",
+          email: "soporte@allonsapp.com",
           contactType: "customer support",
           areaServed: "HN",
           availableLanguage: ["es"],

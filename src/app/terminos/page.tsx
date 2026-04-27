@@ -88,7 +88,7 @@ const SECTIONS = [
   {
     title: "12. Contacto",
     body: [
-      "Para cualquier consulta sobre estos términos, escríbenos a hola@allonsapp.com.",
+      "Para cualquier consulta sobre estos términos, escríbenos a soporte@allonsapp.com.",
     ],
   },
 ];

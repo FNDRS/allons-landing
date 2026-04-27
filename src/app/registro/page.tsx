@@ -27,7 +27,7 @@ export default function RegistroPage() {
     >
       <div style={{ marginTop: 40, paddingBottom: 80 }}>
         <a
-          href="mailto:hola@allonsapp.com?subject=Quiero crear mi cuenta en ALLONS"
+          href="mailto:soporte@allonsapp.com?subject=Quiero crear mi cuenta en ALLONS"
           style={{
             display: "inline-flex",
             alignItems: "center",

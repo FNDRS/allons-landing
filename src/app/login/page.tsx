@@ -27,7 +27,7 @@ export default function LoginPage() {
     >
       <div style={{ marginTop: 40, paddingBottom: 80 }}>
         <a
-          href="mailto:hola@allonsapp.com?subject=Quiero acceso temprano a ALLONS"
+          href="mailto:soporte@allonsapp.com?subject=Quiero acceso temprano a ALLONS"
           style={{
             display: "inline-flex",
             alignItems: "center",

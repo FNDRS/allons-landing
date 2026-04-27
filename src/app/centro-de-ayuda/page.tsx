@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { PageShell } from "@/components/PageShell";
 
-const SUPPORT_EMAIL = "hola@allonsapp.com";
+const SUPPORT_EMAIL = "soporte@allonsapp.com";
 
 export const metadata: Metadata = {
   title: "Centro de ayuda",

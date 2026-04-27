@@ -27,7 +27,7 @@ export default function VentasPage() {
     >
       <div style={{ marginTop: 40, paddingBottom: 80 }}>
         <a
-          href="mailto:hola@allonsapp.com?subject=Quiero hablar con ventas de ALLONS"
+          href="mailto:soporte@allonsapp.com?subject=Quiero hablar con ventas de ALLONS"
           style={{
             display: "inline-flex",
             alignItems: "center",
