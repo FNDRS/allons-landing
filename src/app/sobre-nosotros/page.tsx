@@ -22,7 +22,7 @@ const VALUES = [
   },
   {
     title: "Construyendo en abierto",
-    desc: "Publicamos cada mejora en nuestro changelog. Sin humo, sin promesas vacías.",
+    desc: "Cuando sumamos algo o lo arreglamos, lo dejamos por escrito en Cambios & novedades. Así sabes qué tocamos y por qué.",
   },
 ];
 
@@ -36,7 +36,7 @@ export default function SobreNosotrosPage() {
           <span style={{ color: "#F67010" }}>llenan salas.</span>
         </>
       }
-      subtitle="ALLONS nació porque organizar un evento en Honduras todavía se siente como armar un rompecabezas con piezas de diferentes cajas. Queremos cambiar eso."
+      subtitle="ALLONS nació porque organizar un evento en Honduras todavía se siente como armar un rompecabezas y mucho trabajo en papel o excel. Queremos cambiar eso."
     >
       <div
         style={{

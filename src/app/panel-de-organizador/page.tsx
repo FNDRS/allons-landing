@@ -10,12 +10,12 @@ export const metadata: Metadata = {
 const SECTIONS = [
   {
     title: "Crea tu evento",
-    desc: "Sube portada, define tipos de entrada, agrega ubicación y publica en minutos.",
+    desc: "Define tipos de entrada, agrega ubicación y publica en minutos.",
     bullets: [
-      "Editor visual sin código",
       "Tipos de entrada ilimitados",
       "Programación de fechas y cupos",
       "Vista previa antes de publicar",
+      "Publica en minutos",
     ],
   },
   {
@@ -24,7 +24,6 @@ const SECTIONS = [
     bullets: [
       "Link único por evento",
       "Códigos de descuento",
-      "Pixel de seguimiento",
       "Reportes por canal",
     ],
   },
@@ -45,7 +44,7 @@ const SECTIONS = [
       "Ventas e ingresos en vivo",
       "Embudo de conversión",
       "Asistencia vs vendido",
-      "Exportación a CSV",
+      "Exportación a CSV, PDF y Excel",
     ],
   },
 ];

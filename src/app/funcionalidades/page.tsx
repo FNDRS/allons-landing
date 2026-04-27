@@ -71,27 +71,7 @@ const FEATURES = [
       },
     ],
   },
-  {
-    group: "Marketing y crecimiento",
-    items: [
-      {
-        title: "Página del evento personalizable",
-        desc: "Sube tu portada, escribe la descripción, agrega ubicación y muestra a tu audiencia. Todo sin código.",
-      },
-      {
-        title: "Link de venta directo",
-        desc: "Comparte un link en redes y vende sin que el comprador instale nada. Cero fricción.",
-      },
-      {
-        title: "Pixel de seguimiento",
-        desc: "Conecta Meta Pixel o Google Analytics para medir tus campañas de pago.",
-      },
-      {
-        title: "Base de asistentes",
-        desc: "Cada venta engrosa tu lista de contactos. Reusa esa audiencia para tus próximos eventos.",
-      },
-    ],
-  },
+ 
 ];
 
 export default function FuncionalidadesPage() {
