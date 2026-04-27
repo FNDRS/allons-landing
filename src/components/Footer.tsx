@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export function Footer() {
   return (
@@ -22,9 +23,9 @@ export function Footer() {
         >
           {/* About */}
           <div>
-            <a href="#">
+            <Link href="/">
               <Image src="/logo.png" alt="Allons" width={110} height={34} style={{ height: 30, width: "auto" }} />
-            </a>
+            </Link>
             <p style={{ fontSize: 14, color: "#494848", maxWidth: 320, margin: "14px 0 0" }}>
               Conectamos a quienes crean eventos con quienes buscan experiencias en su ciudad.
             </p>
@@ -34,18 +35,18 @@ export function Footer() {
           {[
             {
               title: "Producto",
-              links: ["Funcionalidades", "Precios", "Panel de organizador", "Cambios & novedades"],
-              hrefs: ["#features", "#pricing", "#", "#"],
+              links: ["Funcionalidades", "Panel de organizador", "Cambios & novedades"],
+              hrefs: ["/funcionalidades", "/panel-de-organizador", "/cambios-novedades"],
             },
             {
               title: "Empresa",
-              links: ["Sobre nosotros", "Blog", "Clientes", "Trabajá con nosotros"],
-              hrefs: ["#", "#", "#", "#"],
+              links: ["Sobre nosotros", "Centro de ayuda"],
+              hrefs: ["/sobre-nosotros", "/centro-de-ayuda"],
             },
             {
-              title: "Recursos",
-              links: ["Centro de ayuda", "API docs", "Términos", "Privacidad"],
-              hrefs: ["#", "#", "#", "#"],
+              title: "Legal",
+              links: ["Términos", "Privacidad"],
+              hrefs: ["/terminos", "/privacidad"],
             },
           ].map((col) => (
             <div key={col.title}>
@@ -63,9 +64,9 @@ export function Footer() {
               <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 10 }}>
                 {col.links.map((link, i) => (
                   <li key={link}>
-                    <a href={col.hrefs[i]} style={{ fontSize: 13.5, color: "#494848" }}>
+                    <Link href={col.hrefs[i]} style={{ fontSize: 13.5, color: "#494848" }}>
                       {link}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -89,9 +90,9 @@ export function Footer() {
         >
           <span>© 2026 ALLONS · Hecho en Honduras con orgullo.</span>
           <div style={{ display: "flex", gap: 20 }}>
-            {["Instagram", "TikTok", "X"].map((s) => (
-              <a key={s} href="#" style={{ color: "#6B6A70" }}>{s}</a>
-            ))}
+            <Link target="_blank" href="https://www.instagram.com/allons.hn?igsh=MWNjbGpqeGduaHQ0NA==" style={{ color: "#6B6A70" }}>
+              Instagram
+            </Link>
           </div>
         </div>
       </div>

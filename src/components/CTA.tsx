@@ -26,10 +26,10 @@ export function CTA() {
               color: "#fff",
             }}
           >
-            Tu próximo lleno total
+            Tu próximo <span style={{ color: "#F67010", fontStyle: "italic" }}>sold out</span>
             <br />
             empieza{" "}
-            <span style={{ color: "#F67010", fontStyle: "italic" }}>hoy.</span>
+            <span style={{ color: "#F67010", fontStyle: "bold" }}>hoy.</span>
           </h2>
 
           <p
@@ -94,7 +94,7 @@ export function CTA() {
               letterSpacing: "0.05em",
             }}
           >
-            PRIMER EVENTO 100% GRATIS · SOPORTE EN ESPAÑOL · DESEMBOLSOS EN HNL
+             EVENTOS ILIMITADOS · SOPORTE EN ESPAÑOL · DESEMBOLSOS EN HNL
           </div>
         </div>
       </div>
