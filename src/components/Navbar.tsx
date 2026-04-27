@@ -52,9 +52,9 @@ export function Navbar() {
           className="nav-links-desktop"
         >
           {[
-            { label: "Producto", href: "#features" },
-            { label: "Cómo funciona", href: "#flow" },
-            { label: "Preguntas", href: "#faq" },
+            { label: "Producto", href: "/#features" },
+            { label: "Cómo funciona", href: "/#flow" },
+            { label: "Preguntas", href: "/#faq" },
           ].map((link) => (
             <a
               key={link.href}
